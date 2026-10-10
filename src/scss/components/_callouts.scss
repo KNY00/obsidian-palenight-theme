@@ -1,0 +1,85 @@
+// =============================================================================
+// Components: Callouts / Encadrés Markdown (BEM)
+// Block: .ob-callout | Elements: __title, __icon, __content | Modifiers: --note, --tip, --warning, --danger
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-callout {
+  padding: a.$spacing-3 a.$spacing-4;
+  margin: a.$spacing-4 0;
+  border-radius: a.$radius-md;
+  border-left: 4px solid var(--callout-color, a.$color-palenight-accent);
+  background-color: rgba(var(--callout-color-rgb, 126, 87, 194), 0.08);
+  transition: all a.$transition-fast;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: a.$spacing-2;
+    font-weight: a.$font-weight-semibold;
+    color: var(--callout-color, a.$color-palenight-accent);
+    margin-bottom: a.$spacing-2;
+  }
+
+  &__icon {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__content {
+    color: var(--text-normal);
+    line-height: a.$line-height-normal;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Modificateurs de variante BEM
+  &--note {
+    --callout-color: #{a.$color-palenight-blue};
+    --callout-color-rgb: 130, 170, 255;
+  }
+
+  &--tip {
+    --callout-color: #{a.$color-palenight-teal};
+    --callout-color-rgb: 128, 203, 196;
+  }
+
+  &--warning {
+    --callout-color: #{a.$color-palenight-yellow};
+    --callout-color-rgb: 255, 203, 107;
+  }
+
+  &--danger {
+    --callout-color: #{a.$color-palenight-red};
+    --callout-color-rgb: 255, 83, 112;
+  }
+
+  &--success {
+    --callout-color: #{a.$color-palenight-green};
+    --callout-color-rgb: 195, 232, 141;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les Callouts natifs d'Obsidian
+// -----------------------------------------------------------------------------
+.callout {
+  border-radius: a.$radius-md;
+  border-left-width: 4px;
+  background-color: rgba(var(--callout-color), 0.08);
+  border-left-color: rgb(var(--callout-color));
+  margin: a.$spacing-4 0;
+  padding: a.$spacing-3 a.$spacing-4;
+
+  .callout-title {
+    color: rgb(var(--callout-color));
+    font-weight: a.$font-weight-semibold;
+  }
+
+  .callout-icon {
+    color: rgb(var(--callout-color));
+  }
+}

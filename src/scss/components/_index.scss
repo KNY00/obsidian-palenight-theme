@@ -1,0 +1,16 @@
+// =============================================================================
+// Components: Point d'entrée réexportant tous les composants BEM isolés
+// =============================================================================
+
+@forward "buttons";
+@forward "inputs";
+@forward "modals";
+@forward "callouts";
+@forward "tags";
+@forward "status-bar";
+@forward "tabs";
+@forward "tables";
+@forward "checkboxes";
+@forward "code-blocks";
+@forward "graph";
+@forward "tree-view";

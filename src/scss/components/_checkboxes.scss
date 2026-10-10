@@ -1,0 +1,64 @@
+// =============================================================================
+// Components: Cases à cocher & Listes de tâches (BEM)
+// Block: .ob-checkbox | Modifiers: --checked, --custom
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--background-modifier-border-hover);
+  border-radius: a.$radius-sm;
+  background-color: var(--background-modifier-form-field);
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all a.$transition-fast;
+  margin-right: a.$spacing-2;
+  vertical-align: middle;
+
+  &:hover {
+    border-color: var(--interactive-accent);
+  }
+
+  &:checked,
+  &--checked {
+    background-color: var(--interactive-accent);
+    border-color: var(--interactive-accent);
+
+    &::after {
+      content: "";
+      width: 4px;
+      height: 8px;
+      border: solid #ffffff;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+      margin-bottom: 2px;
+    }
+  }
+
+  &:focus-visible {
+    @include a.focus-ring;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les listes de tâches Markdown Obsidian
+// -----------------------------------------------------------------------------
+.task-list-item {
+  list-style-type: none;
+
+  input[type="checkbox"] {
+    @extend .ob-checkbox;
+  }
+
+  &.is-checked {
+    color: var(--text-muted);
+    text-decoration: line-through;
+  }
+}

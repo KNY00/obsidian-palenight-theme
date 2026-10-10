@@ -1,0 +1,146 @@
+// =============================================================================
+// Components: Champs de formulaire & Saisie (BEM)
+// Block: .ob-input | Elements: __field, __icon | Modifiers: --search, --error
+// =============================================================================
+
+@use "../abstracts" as a;
+
+// -----------------------------------------------------------------------------
+// Composant BEM personnalisé (pour modules et extensions sur mesure)
+// -----------------------------------------------------------------------------
+.ob-input {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+
+  &__field {
+    width: 100%;
+    padding: a.$spacing-2 a.$spacing-3;
+    font-family: inherit;
+    font-size: a.$font-size-sm;
+    color: var(--text-normal);
+    background-color: var(--background-modifier-form-field);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--input-radius, #{a.$radius-md});
+    transition: all a.$transition-fast;
+
+    &::placeholder {
+      color: var(--text-faint);
+    }
+
+    &:hover {
+      border-color: var(--background-modifier-border-hover);
+    }
+
+    &:focus {
+      @include a.focus-ring(a.$color-palenight-border-focus);
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: a.$spacing-3;
+    color: var(--text-muted);
+    pointer-events: none;
+  }
+
+  // Modificateurs BEM
+  &--search {
+    .ob-input__field {
+      padding-left: a.$spacing-8;
+      border-radius: a.$radius-full;
+    }
+  }
+
+  &--error {
+    .ob-input__field {
+      border-color: var(--background-modifier-error);
+
+      &:focus {
+        @include a.focus-ring(a.$color-palenight-red);
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les contrôles natifs d'Obsidian (Préservation stricte du layout)
+// -----------------------------------------------------------------------------
+
+// 1. Text inputs & textareas : styles cosmétiques (couleurs, bordures, focus)
+// Sans écraser le padding interne natif d'Obsidian
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+textarea {
+  font-family: inherit;
+  color: var(--text-normal);
+  background-color: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius, #{a.$radius-md});
+  transition: border-color a.$transition-fast, box-shadow a.$transition-fast;
+
+  &::placeholder {
+    color: var(--text-faint);
+  }
+
+  &:hover {
+    border-color: var(--background-modifier-border-hover);
+  }
+
+  &:focus {
+    @include a.focus-ring(a.$color-palenight-border-focus);
+  }
+}
+
+// 2. Selects & Dropdowns : préserve entièrement le layout interne, la hauteur de ligne
+// et la marge du chevron SVG pour éviter que le texte ne soit masqué par les bordures
+select,
+.dropdown {
+  font-family: inherit;
+  color: var(--text-normal);
+  background-color: var(--background-modifier-form-field);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--input-radius, #{a.$radius-md});
+  transition: border-color a.$transition-fast, box-shadow a.$transition-fast;
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--background-modifier-border-hover);
+  }
+
+  &:focus {
+    @include a.focus-ring(a.$color-palenight-border-focus);
+  }
+}
+
+// 3. Conteneurs de recherche (Settings, File Explorer, Quick switcher) :
+// Garantit un espacement à gauche pour l'icône de loupe afin d'éviter tout chevauchement (overlap)
+.search-input-container {
+  position: relative;
+
+  input {
+    background-color: var(--background-modifier-form-field);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: var(--input-radius, #{a.$radius-md});
+    color: var(--text-normal);
+    // Garantit l'alignement et le dégagement de l'icône loupe à gauche
+    padding-inline-start: 30px !important;
+    padding-inline-end: 28px !important;
+
+    &::placeholder {
+      color: var(--text-faint);
+    }
+
+    &:hover {
+      border-color: var(--background-modifier-border-hover);
+    }
+
+    &:focus {
+      @include a.focus-ring(a.$color-palenight-border-focus);
+    }
+  }
+}

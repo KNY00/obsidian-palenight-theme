@@ -1,0 +1,95 @@
+// =============================================================================
+// Components: Blocs de Code & Coloration Syntaxique Palenight (BEM)
+// Block: .ob-code-block | Elements: __header, __lang, __copy, __content
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-code-block {
+  position: relative;
+  background-color: var(--code-background, a.$color-palenight-bg-dark);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: a.$radius-lg;
+  margin: a.$spacing-4 0;
+  overflow: hidden;
+
+  &__header {
+    @include a.flex-between;
+    padding: a.$spacing-2 a.$spacing-4;
+    background-color: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--background-modifier-border);
+    font-size: a.$font-size-xs;
+    color: var(--text-muted);
+  }
+
+  &__lang {
+    font-weight: a.$font-weight-medium;
+    text-transform: uppercase;
+    color: var(--code-property, a.$color-palenight-teal);
+  }
+
+  &__copy {
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 2px 6px;
+    border-radius: a.$radius-sm;
+    transition: all a.$transition-fast;
+
+    &:hover {
+      color: var(--text-normal);
+      background-color: var(--background-modifier-hover);
+    }
+  }
+
+  &__content {
+    padding: a.$spacing-4;
+    font-family: var(--font-monospace, a.$font-family-mono);
+    font-size: a.$font-size-sm;
+    line-height: a.$line-height-relaxed;
+    color: var(--code-normal, a.$color-palenight-text);
+    overflow-x: auto;
+    @include a.custom-scrollbar;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les blocs de code natifs Markdown Obsidian
+// -----------------------------------------------------------------------------
+.markdown-rendered pre {
+  background-color: var(--code-background, a.$color-palenight-bg-dark);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: a.$radius-lg;
+  padding: a.$spacing-4;
+  margin: a.$spacing-4 0;
+  position: relative;
+  overflow-x: auto;
+  @include a.custom-scrollbar;
+
+  code {
+    font-family: var(--font-monospace, a.$font-family-mono);
+    font-size: a.$font-size-sm;
+    line-height: a.$line-height-relaxed;
+    color: var(--code-normal, a.$color-palenight-text);
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .copy-code-button {
+    background-color: var(--background-secondary-alt);
+    border: 1px solid var(--background-modifier-border);
+    color: var(--text-muted);
+    border-radius: a.$radius-sm;
+    padding: 2px 8px;
+    font-size: a.$font-size-xs;
+    transition: all a.$transition-fast;
+
+    &:hover {
+      color: var(--text-bright, a.$color-palenight-text-bright);
+      background-color: var(--interactive-accent);
+      border-color: var(--interactive-accent);
+    }
+  }
+}

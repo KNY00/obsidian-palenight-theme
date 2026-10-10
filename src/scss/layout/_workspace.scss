@@ -1,0 +1,87 @@
+// =============================================================================
+// Layout: Conteneurs d'espace de travail (Workspace, Fenêtre centrale & Volets)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+// Barre latérale d'outils / Ribbon Obsidian
+.workspace-ribbon {
+  background-color: var(--ribbon-background);
+  border-right: 1px solid var(--divider-color);
+
+  &.mod-left {
+    border-right: 1px solid var(--divider-color);
+  }
+
+  &.mod-right {
+    border-left: 1px solid var(--divider-color);
+  }
+
+  .side-dock-ribbon-action {
+    color: var(--text-muted);
+    border-radius: a.$radius-md;
+    transition: all a.$transition-fast;
+
+    &:hover {
+      color: var(--text-bright, a.$color-palenight-text-bright);
+      background-color: var(--background-modifier-hover);
+    }
+
+    &.is-active {
+      color: var(--interactive-accent);
+      background-color: var(--background-modifier-active-hover);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Délimitations de bordures entre volets latéraux et fenêtre centrale
+// -----------------------------------------------------------------------------
+
+// Fenêtre centrale (mod-root & mod-primary)
+.workspace-split.mod-root,
+.mod-root,
+.mod-primary {
+  background-color: var(--background-primary);
+  border-left: 1px solid var(--divider-color);
+  border-right: 1px solid var(--divider-color);
+  position: relative;
+  z-index: 1;
+
+  // Séparations nettes au sein des subdivisions de la fenêtre centrale
+  &.mod-vertical > .workspace-split:not(:last-child),
+  &.mod-vertical > .workspace-tabs:not(:last-child),
+  &.mod-vertical > .workspace-leaf:not(:last-child) {
+    border-right: 1px solid var(--divider-color);
+  }
+
+  &.mod-horizontal > .workspace-split:not(:last-child),
+  &.mod-horizontal > .workspace-tabs:not(:last-child),
+  &.mod-horizontal > .workspace-leaf:not(:last-child) {
+    border-bottom: 1px solid var(--divider-color);
+  }
+}
+
+// Séparateurs de volets redimensionnables (Splitters)
+.workspace-split {
+  &.mod-horizontal,
+  &.mod-vertical {
+    background-color: var(--background-secondary);
+  }
+}
+
+// Ligne de délimitation interactive entre les volets (poignée de redimensionnement)
+.workspace-leaf-resize-handle {
+  background-color: var(--divider-color);
+  transition: background-color a.$transition-fast;
+  z-index: 10;
+
+  &:hover {
+    background-color: var(--interactive-accent) !important;
+  }
+}
+
+// En-têtes d'onglets (délimitation nette sous les onglets)
+.workspace-tab-header-container {
+  border-bottom: 1px solid var(--divider-color);
+}

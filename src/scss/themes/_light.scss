@@ -1,0 +1,92 @@
+// =============================================================================
+// Themes: Light Theme (Palenight Light Variant)
+// =============================================================================
+
+@use "sass:color";
+@use "../abstracts" as a;
+
+.theme-light {
+  // Arrière-plans
+  --background-primary:         #{a.$color-light-bg};
+  --background-primary-alt:     #{a.$color-light-bg-alt};
+  --background-secondary:       #{a.$color-light-bg-sidebar};
+  --background-secondary-alt:   #{a.$color-light-bg-hover};
+
+  // Modificateurs d'arrière-plan
+  --background-modifier-hover:       rgba(0, 0, 0, 0.04);
+  --background-modifier-active-hover: rgba(94, 53, 177, 0.1);
+  --background-modifier-border:      #{a.$color-light-border};
+  --background-modifier-border-hover: #{color.adjust(a.$color-light-border, $lightness: -10%)};
+  --background-modifier-border-focus: #{a.$color-light-accent};
+  --background-modifier-error:       #D32F2F;
+  --background-modifier-error-rgb:   211, 47, 47;
+  --background-modifier-success:     #388E3C;
+  --background-modifier-message:     #{a.$color-light-bg-alt};
+  --background-modifier-form-field:  #{a.$color-light-bg-input};
+  --dropdown-background:             #{a.$color-light-bg-input};
+  --background-modifier-box-shadow:  rgba(0, 0, 0, 0.1);
+  --background-modifier-cover:       rgba(240, 240, 245, 0.8);
+
+  // Textes & Typographie
+  --text-normal:          #{a.$color-light-text};
+  --text-muted:           #{a.$color-light-text-muted};
+  --text-accent:          var(--h5-color);                             // #1E88E5 (aligné sur H5)
+  --text-accent-hover:    #0288D1;
+  --link-color:           var(--h5-color);                             // #1E88E5
+  --link-color-hover:     #0288D1;
+  --link-external-color:  var(--h5-color);                             // #1E88E5
+  --link-external-color-hover: #0288D1;
+  --text-on-accent:       #FFFFFF;
+  --text-selection:       #{a.$color-light-bg-active};
+  --text-highlight-bg:    rgba(94, 53, 177, 0.15);
+  --text-error:           #D32F2F;
+  --text-warning:         #F57F17;
+  --text-success:         #388E3C;
+
+  // Titres
+  --h1-color: #E65100;
+  --h2-color: #8E24AA;
+  --h3-color: #00897B;
+  --h4-color: #F57F17;
+  --h5-color: #1E88E5;
+  --h6-color: #43A047;
+
+  // Éléments Interactifs
+  --interactive-normal:   #{a.$color-light-bg-elevated};
+  --interactive-hover:    #{a.$color-light-bg-hover};
+  --interactive-accent:   #{a.$color-light-accent};
+  --interactive-accent-hover: #{a.$color-light-accent-hover};
+  --interactive-success:  #388E3C;
+
+  // Onglets
+  --tab-background-active:     #{a.$color-light-bg};
+  --tab-text-color-active:     #{a.$color-light-text-bright};
+  --tab-background-inactive:   #{a.$color-light-bg-sidebar};
+  --tab-text-color-inactive:   #{a.$color-light-text-muted};
+  --tab-outline-color:         #{a.$color-light-border};
+
+  // Barres d'outils, Statut et Ribbon
+  --ribbon-background:         #{a.$color-light-bg-sidebar};
+  --status-bar-background:     #{a.$color-light-bg-sidebar};
+  --status-bar-text-color:     #{a.$color-light-text-muted};
+  --status-bar-border-color:   #{a.$color-light-border};
+  --titlebar-background:       #{a.$color-light-bg-sidebar};
+  --divider-color:             #{a.$color-light-border};
+  --divider-color-hover:       #{a.$color-light-accent};
+  --divider-width:             1px;
+  --divider-width-hover:       2px;
+
+  // Code
+  --code-normal:               #{a.$color-light-text};
+  --code-background:           #{a.$color-light-bg-alt};
+  --code-comment:              #{a.$color-light-text-muted};
+  --code-function:             #1E88E5;
+  --code-keyword:              #8E24AA;
+  --code-string:               #2E7D32;
+  --code-value:                #E65100;
+
+  // Tags
+  --tag-color:                 #00897B;
+  --tag-background:            rgba(0, 137, 123, 0.1);
+  --tag-background-hover:      rgba(0, 137, 123, 0.2);
+}

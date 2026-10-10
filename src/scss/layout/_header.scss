@@ -1,0 +1,36 @@
+// =============================================================================
+// Layout: En-têtes (Window Titlebar & View Header)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.titlebar {
+  background-color: var(--titlebar-background);
+  color: var(--titlebar-text-color);
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.view-header {
+  background-color: var(--background-primary);
+  border-bottom: 1px solid var(--divider-color);
+
+  .view-header-title {
+    font-size: a.$font-size-sm;
+    font-weight: a.$font-weight-medium;
+    color: var(--text-normal);
+  }
+
+  .view-actions {
+    button,
+    .clickable-icon {
+      color: var(--text-muted);
+      border-radius: a.$radius-sm;
+      transition: all a.$transition-fast;
+
+      &:hover {
+        color: var(--text-bright, a.$color-palenight-text-bright);
+        background-color: var(--background-modifier-hover);
+      }
+    }
+  }
+}

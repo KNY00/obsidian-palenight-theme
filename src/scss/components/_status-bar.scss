@@ -1,0 +1,59 @@
+// =============================================================================
+// Components: Barre de Statut (BEM)
+// Block: .ob-status-bar | Elements: __item, __icon | Modifiers: --syncing
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: a.$spacing-3;
+  padding: 0 a.$spacing-4;
+  height: 28px;
+  background-color: var(--status-bar-background);
+  border-top: 1px solid var(--status-bar-border-color);
+  font-size: a.$font-size-xs;
+  color: var(--status-bar-text-color);
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    gap: a.$spacing-1;
+    cursor: pointer;
+    padding: 2px a.$spacing-2;
+    border-radius: a.$radius-sm;
+    transition: all a.$transition-fast;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-normal);
+    }
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec la barre de statut native d'Obsidian
+// -----------------------------------------------------------------------------
+.status-bar {
+  background-color: var(--status-bar-background);
+  border-top: 1px solid var(--status-bar-border-color);
+  color: var(--status-bar-text-color);
+  font-size: a.$font-size-xs;
+
+  .status-bar-item {
+    border-radius: a.$radius-sm;
+    transition: background-color a.$transition-fast;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+      color: var(--text-normal);
+    }
+  }
+}

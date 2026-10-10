@@ -1,0 +1,117 @@
+// =============================================================================
+// Abstracts: Mixins SCSS complexes et réutilisables
+// =============================================================================
+
+@use "variables" as v;
+
+// -----------------------------------------------------------------------------
+// Ombres portées & Élévation (Box-shadows complexes)
+// -----------------------------------------------------------------------------
+@mixin elevation($level: 1) {
+  @if $level == 1 {
+    box-shadow: v.$shadow-sm;
+  } @else if $level == 2 {
+    box-shadow: v.$shadow-md;
+  } @else if $level == 3 {
+    box-shadow: v.$shadow-lg;
+  } @else if $level == 4 {
+    box-shadow: v.$shadow-xl;
+  } @else {
+    box-shadow: none;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Disposition Flexbox (raccourcis rapides)
+// -----------------------------------------------------------------------------
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// -----------------------------------------------------------------------------
+// Anneau de focus (Accessibilité & Style Palenight)
+// -----------------------------------------------------------------------------
+@mixin focus-ring($color: v.$color-palenight-border-focus, $offset: 2px) {
+  outline: none;
+  box-shadow: 0 0 0 $offset rgba($color, 0.45);
+  border-color: $color !important;
+}
+
+// -----------------------------------------------------------------------------
+// Scrollbars personnalisées dans l'esprit VS Code Palenight
+// -----------------------------------------------------------------------------
+@mixin custom-scrollbar(
+  $thumb-bg: rgba(105, 76, 164, 0.4),
+  $thumb-hover: rgba(105, 76, 164, 0.8),
+  $track-bg: transparent,
+  $size: 8px
+) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+    background-color: $track-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-bg;
+    border-radius: v.$radius-full;
+    transition: background-color v.$transition-fast;
+
+    &:hover {
+      background-color: $thumb-hover;
+    }
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $track-bg;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Tronquage de texte sur une seule ligne
+// -----------------------------------------------------------------------------
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// -----------------------------------------------------------------------------
+// Effet verre dépoli / Glassmorphism subtil
+// -----------------------------------------------------------------------------
+@mixin glass-panel($bg: rgba(41, 45, 62, 0.85), $blur: 12px) {
+  background-color: $bg;
+  backdrop-filter: blur($blur);
+  -webkit-backdrop-filter: blur($blur);
+}
+
+// -----------------------------------------------------------------------------
+// États interactifs fluides (Hover, Active, Focus)
+// -----------------------------------------------------------------------------
+@mixin interactive-state($bg-default, $bg-hover, $bg-active: null) {
+  background-color: $bg-default;
+  transition: background-color v.$transition-fast, color v.$transition-fast, border-color v.$transition-fast;
+
+  &:hover {
+    background-color: $bg-hover;
+  }
+
+  @if $bg-active {
+    &:active {
+      background-color: $bg-active;
+    }
+  }
+}

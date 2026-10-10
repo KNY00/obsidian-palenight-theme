@@ -1,0 +1,131 @@
+// =============================================================================
+// Abstracts: Variables & Design Tokens (Material Palenight)
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// 1. Palette de Couleurs VS Code Palenight (Dark)
+// -----------------------------------------------------------------------------
+$color-palenight-bg:              #292D3E; // Editor background principal
+$color-palenight-bg-dark:         #232635; // Conteneurs sombres, peek view, widget shadow
+$color-palenight-bg-sidebar:      #282C3D; // Barres latérales, activity bar, status bar
+$color-palenight-bg-alt:          #262A39; // Délimiteurs, header tabs borders
+$color-palenight-bg-tab-inactive: #31364A; // Onglets inactifs
+$color-palenight-bg-elevated:     #32374C; // Popups, menus, modals
+$color-palenight-bg-input:        #414863; // Champs de formulaire, inputs
+$color-palenight-bg-hover:        #2E3245; // Survol de listes / éléments
+$color-palenight-bg-active:       #3C435E; // Éléments actifs, sélections
+
+// Palette Texte Palenight
+$color-palenight-text:            #BFC7D5; // Texte principal du code & lecture
+$color-palenight-text-bright:     #EEFFFF; // Titres, texte actif, contraste fort
+$color-palenight-text-muted:      #676E95; // Commentaires, métadonnées
+$color-palenight-text-faint:      #4C5374; // Numéros de ligne, bordures légères
+$color-palenight-text-disabled:   #545B7F; // Texte désactivé
+$color-palenight-text-white:      #FFFFFF; // Blanc pur pour badges / highlights
+
+// Palette Accents & Syntaxe Palenight
+$color-palenight-accent:          #7E57C2; // Violet signature Palenight (boutons, curseur, badges)
+$color-palenight-accent-hover:    #9370DB; // Violet accent hover
+$color-palenight-accent-subtle:   rgba(126, 87, 194, 0.2); // Surlignage violet translucide
+$color-palenight-purple:          #C792EA; // Lilas / mots-clés, headings h2
+$color-palenight-blue:            #82AAFF; // Bleu ciel / fonctions, liens, headings h1
+$color-palenight-cyan:            #89DDFF; // Cyan / opérateurs, ponctuation
+$color-palenight-teal:            #80CBC4; // Turquoise / regex, tags, headings h3
+$color-palenight-green:           #C3E88D; // Vert doux / chaînes de caractères, succès, h6
+$color-palenight-yellow:          #FFCB6B; // Jaune doré / variables, classes, warnings, h4
+$color-palenight-orange:          #F78C6C; // Orange pêche / nombres, constantes, h5
+$color-palenight-red:             #FF5370; // Rouge corail / erreurs, suppressions, critiques
+
+// Bordures & Délimiteurs Palenight
+$color-palenight-border:          #282B3C;
+$color-palenight-border-light:    #383D55;
+$color-palenight-border-focus:    #7E57C2;
+$color-palenight-divider:         #393e55; // Délimiteur net et contrasté entre les volets
+
+// -----------------------------------------------------------------------------
+// 2. Palette Dérivée Palenight Light (Mode Clair)
+// -----------------------------------------------------------------------------
+$color-light-bg:                  #FAFAFA;
+$color-light-bg-alt:              #F0F0F5;
+$color-light-bg-sidebar:          #E8EAF0;
+$color-light-bg-elevated:         #FFFFFF;
+$color-light-bg-input:            #E3E6EF;
+$color-light-bg-hover:            #E5E8F2;
+$color-light-bg-active:           #D5DAE8;
+
+$color-light-text:                #383A42;
+$color-light-text-bright:         #18191E;
+$color-light-text-muted:          #6A737D;
+$color-light-text-faint:          #959DA5;
+
+$color-light-accent:              #5E35B1; // Violet contrasté pour le jour
+$color-light-accent-hover:        #512DA8;
+$color-light-border:              #D0D4DF;
+
+// -----------------------------------------------------------------------------
+// 3. Typographie
+// -----------------------------------------------------------------------------
+$font-family-sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
+$font-family-mono:  "Fira Code", "JetBrains Mono", Consolas, Menlo, Monaco, monospace;
+$font-family-serif: "Merriweather", Georgia, "Times New Roman", serif;
+
+$font-size-xs:   0.75rem;   // 12px
+$font-size-sm:   0.875rem;  // 14px
+$font-size-base: 1rem;      // 16px
+$font-size-lg:   1.125rem;  // 18px
+$font-size-xl:   1.25rem;   // 20px
+$font-size-2xl:  1.5rem;    // 24px
+$font-size-3xl:  1.875rem;  // 30px
+$font-size-4xl:  2.25rem;   // 36px
+
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$font-weight-semibold: 600;
+$font-weight-bold:    700;
+
+$line-height-tight:  1.25;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.75;
+
+// -----------------------------------------------------------------------------
+// 4. Espacements (Spacing Scale)
+// -----------------------------------------------------------------------------
+$spacing-1: 0.25rem;  // 4px
+$spacing-2: 0.5rem;   // 8px
+$spacing-3: 0.75rem;  // 12px
+$spacing-4: 1rem;      // 16px
+$spacing-5: 1.25rem;  // 20px
+$spacing-6: 1.5rem;   // 24px
+$spacing-8: 2rem;     // 32px
+$spacing-10: 2.5rem;  // 40px
+
+// -----------------------------------------------------------------------------
+// 5. Rayons de courbure (Border Radius)
+// -----------------------------------------------------------------------------
+$radius-sm:   4px;
+$radius-md:   6px;
+$radius-lg:   8px;
+$radius-xl:   12px;
+$radius-full: 9999px;
+
+// -----------------------------------------------------------------------------
+// 6. Ombres portées (Box Shadows)
+// -----------------------------------------------------------------------------
+$shadow-sm: 0 1px 2px rgba(15, 17, 26, 0.4);
+$shadow-md: 0 4px 6px -1px rgba(15, 17, 26, 0.5), 0 2px 4px -1px rgba(15, 17, 26, 0.3);
+$shadow-lg: 0 10px 15px -3px rgba(15, 17, 26, 0.6), 0 4px 6px -2px rgba(15, 17, 26, 0.4);
+$shadow-xl: 0 20px 25px -5px rgba(15, 17, 26, 0.7), 0 10px 10px -5px rgba(15, 17, 26, 0.5);
+
+// -----------------------------------------------------------------------------
+// 7. Transitions
+// -----------------------------------------------------------------------------
+$transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+$transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+// -----------------------------------------------------------------------------
+// 8. Z-Index
+// -----------------------------------------------------------------------------
+$z-index-dropdown: 1000;
+$z-index-modal:    2000;
+$z-index-tooltip:  3000;

@@ -1,0 +1,71 @@
+// =============================================================================
+// Abstracts: Classes utilitaires & Mixin équivalent à @apply
+// =============================================================================
+
+@use "variables" as v;
+@use "mixins" as m;
+
+// -----------------------------------------------------------------------------
+// Mixin utilitaire 'apply' : Permet d'encapsuler des utilitaires atomiques
+// dans des composants BEM (alternative à @apply Tailwind en SCSS pur)
+// -----------------------------------------------------------------------------
+@mixin apply($utilities...) {
+  @each $utility in $utilities {
+    @if $utility == 'flex-center' {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    } @else if $utility == 'flex-between' {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    } @else if $utility == 'flex-col' {
+      display: flex;
+      flex-direction: column;
+    } @else if $utility == 'rounded-sm' {
+      border-radius: v.$radius-sm;
+    } @else if $utility == 'rounded-md' {
+      border-radius: v.$radius-md;
+    } @else if $utility == 'rounded-lg' {
+      border-radius: v.$radius-lg;
+    } @else if $utility == 'rounded-full' {
+      border-radius: v.$radius-full;
+    } @else if $utility == 'shadow-sm' {
+      box-shadow: v.$shadow-sm;
+    } @else if $utility == 'shadow-md' {
+      box-shadow: v.$shadow-md;
+    } @else if $utility == 'shadow-lg' {
+      box-shadow: v.$shadow-lg;
+    } @else if $utility == 'truncate' {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    } @else if $utility == 'transition' {
+      transition: all v.$transition-fast;
+    } @else if $utility == 'font-mono' {
+      font-family: v.$font-family-mono;
+    } @else if $utility == 'font-bold' {
+      font-weight: v.$font-weight-bold;
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Classes utilitaires exportées pour usage direct ou composition
+// -----------------------------------------------------------------------------
+.u-flex-center    { @include apply('flex-center'); }
+.u-flex-between   { @include apply('flex-between'); }
+.u-flex-col       { @include apply('flex-col'); }
+
+.u-rounded-sm     { @include apply('rounded-sm'); }
+.u-rounded-md     { @include apply('rounded-md'); }
+.u-rounded-lg     { @include apply('rounded-lg'); }
+.u-rounded-full   { @include apply('rounded-full'); }
+
+.u-shadow-sm      { @include apply('shadow-sm'); }
+.u-shadow-md      { @include apply('shadow-md'); }
+.u-shadow-lg      { @include apply('shadow-lg'); }
+
+.u-truncate       { @include apply('truncate'); }
+.u-transition     { @include apply('transition'); }
+.u-font-mono      { @include apply('font-mono'); }

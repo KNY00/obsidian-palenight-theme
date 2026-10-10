@@ -1,0 +1,128 @@
+// =============================================================================
+// Themes: Dark Theme (VS Code Material Palenight Palette)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.theme-dark {
+  // Arrière-plans (Backgrounds)
+  --background-primary:         #{a.$color-palenight-bg};              // #292D3E
+  --background-primary-alt:     #{a.$color-palenight-bg-dark};         // #232635
+  --background-secondary:       #{a.$color-palenight-bg-sidebar};      // #282C3D
+  --background-secondary-alt:   #{a.$color-palenight-bg-alt};          // #262A39
+  
+  // Modificateurs d'arrière-plan & Survol
+  --background-modifier-hover:       rgba(255, 255, 255, 0.05);
+  --background-modifier-active-hover: rgba(126, 87, 194, 0.15);
+  --background-modifier-border:      #{a.$color-palenight-border};     // #282B3C
+  --background-modifier-border-hover: #{a.$color-palenight-border-light};
+  --background-modifier-border-focus: #{a.$color-palenight-border-focus};
+  --background-modifier-error:       #{a.$color-palenight-red};
+  --background-modifier-error-rgb:   255, 83, 112;
+  --background-modifier-success:     #{a.$color-palenight-green};
+  --background-modifier-message:     #{a.$color-palenight-bg-dark};
+  --background-modifier-form-field:  #{a.$color-palenight-bg-input};   // #414863
+  --dropdown-background:             #{a.$color-palenight-bg-input};
+  --background-modifier-box-shadow:  rgba(15, 17, 26, 0.5);
+  --background-modifier-cover:       rgba(24, 26, 37, 0.75);
+
+  // Textes & Typographie
+  --text-normal:          #{a.$color-palenight-text};                  // #BFC7D5
+  --text-muted:           #{a.$color-palenight-text-muted};            // #676E95
+  --text-accent:          var(--h5-color);                             // #82AAFF (aligné sur H5)
+  --text-accent-hover:    #{a.$color-palenight-cyan};                  // #89DDFF
+  --link-color:           var(--h5-color);                             // #82AAFF
+  --link-color-hover:     #{a.$color-palenight-cyan};                  // #89DDFF
+  --link-external-color:  var(--h5-color);                             // #82AAFF
+  --link-external-color-hover: #{a.$color-palenight-cyan};             // #89DDFF
+  --text-on-accent:       #{a.$color-palenight-text-white};
+  --text-selection:       #{a.$color-palenight-bg-active};             // #3C435E
+  --text-highlight-bg:    #{a.$color-palenight-accent-subtle};
+  --text-error:           #{a.$color-palenight-red};
+  --text-warning:         #{a.$color-palenight-yellow};
+  --text-success:         #{a.$color-palenight-green};
+
+  // Titres (Headings colorés selon la syntaxe Palenight)
+  --h1-color: #{a.$color-palenight-orange};                            // #F78C6C
+  --h2-color: #{a.$color-palenight-purple};                            // #C792EA
+  --h3-color: #{a.$color-palenight-teal};                              // #80CBC4
+  --h4-color: #{a.$color-palenight-yellow};                            // #FFCB6B
+  --h5-color: #{a.$color-palenight-blue};                              // #82AAFF
+  --h6-color: #{a.$color-palenight-green};                             // #C3E88D
+
+  // Éléments Interactifs (Boutons, curseurs)
+  --interactive-normal:   #{a.$color-palenight-bg-elevated};           // #32374C
+  --interactive-hover:    #{a.$color-palenight-bg-hover};              // #2E3245
+  --interactive-accent:   #{a.$color-palenight-accent};                // #7E57C2
+  --interactive-accent-hover: #{a.$color-palenight-accent-hover};
+  --interactive-success:  #{a.$color-palenight-green};
+
+  // Onglets (Tabs)
+  --tab-background-active:     #{a.$color-palenight-bg};               // #292D3E
+  --tab-text-color-active:     #{a.$color-palenight-text-bright};      // #EEFFFF
+  --tab-background-inactive:   #{a.$color-palenight-bg-tab-inactive};  // #31364A
+  --tab-text-color-inactive:   #{a.$color-palenight-text-muted};       // #676E95
+  --tab-outline-color:         #{a.$color-palenight-border};
+
+  // Explorateur & Navigation
+  --nav-item-color:            #{a.$color-palenight-text};
+  --nav-item-color-hover:      #{a.$color-palenight-text-bright};
+  --nav-item-color-active:     #{a.$color-palenight-text-bright};
+  --nav-item-background-hover: #{a.$color-palenight-bg-hover};
+  --nav-item-background-active: #{a.$color-palenight-bg-active};
+
+  // Barres d'outils, Statut et Ribbon
+  --ribbon-background:         #{a.$color-palenight-bg-sidebar};
+  --ribbon-background-collapsed: #{a.$color-palenight-bg-sidebar};
+  --status-bar-background:     #{a.$color-palenight-bg-sidebar};
+  --status-bar-text-color:     #{a.$color-palenight-text-muted};
+  --status-bar-border-color:   #{a.$color-palenight-border};
+  --titlebar-background:       #{a.$color-palenight-bg-alt};
+  --titlebar-text-color:       #{a.$color-palenight-text-bright};
+  --divider-color:             #{a.$color-palenight-divider};
+  --divider-color-hover:       #{a.$color-palenight-accent};
+  --divider-width:             1px;
+  --divider-width-hover:       2px;
+
+  // Code & Syntaxe Palenight
+  --code-normal:               #{a.$color-palenight-text};
+  --code-background:           #{a.$color-palenight-bg-dark};
+  --code-comment:              #{a.$color-palenight-text-muted};
+  --code-function:             #{a.$color-palenight-blue};
+  --code-important:            #{a.$color-palenight-purple};
+  --code-keyword:              #{a.$color-palenight-purple};
+  --code-operator:             #{a.$color-palenight-cyan};
+  --code-property:             #{a.$color-palenight-teal};
+  --code-punctuation:          #{a.$color-palenight-cyan};
+  --code-string:               #{a.$color-palenight-green};
+  --code-tag:                  #{a.$color-palenight-red};
+  --code-value:                #{a.$color-palenight-orange};
+
+  // Tags & Badges
+  --tag-color:                 #{a.$color-palenight-teal};
+  --tag-background:            rgba(128, 203, 196, 0.12);
+  --tag-background-hover:      rgba(128, 203, 196, 0.22);
+  --tag-border-color:          rgba(128, 203, 196, 0.3);
+
+  // Callouts
+  --callout-note:     130, 170, 255;  // #82AAFF
+  --callout-info:     137, 221, 255;  // #89DDFF
+  --callout-todo:     126, 87, 194;   // #7E57C2
+  --callout-summary:  128, 203, 196;  // #80CBC4
+  --callout-tip:      128, 203, 196;  // #80CBC4
+  --callout-success:  195, 232, 141;  // #C3E88D
+  --callout-question: 255, 203, 107;  // #FFCB6B
+  --callout-warning:  255, 203, 107;  // #FFCB6B
+  --callout-failure:  255, 83, 112;   // #FF5370
+  --callout-danger:   255, 83, 112;   // #FF5370
+  --callout-bug:      255, 83, 112;   // #FF5370
+  --callout-example:  199, 146, 234;  // #C792EA
+  --callout-quote:    103, 110, 149;  // #676E95
+
+  // Vue Graphique
+  --graph-line:        #{a.$color-palenight-border-light};
+  --graph-node:        #{a.$color-palenight-accent};
+  --graph-node-unresolved: #{a.$color-palenight-text-muted};
+  --graph-node-focused: #{a.$color-palenight-text-bright};
+  --graph-node-tag:    #{a.$color-palenight-teal};
+}

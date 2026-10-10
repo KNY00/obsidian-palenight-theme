@@ -1,0 +1,39 @@
+// =============================================================================
+// Base: Variables globales CSS pour Obsidian (:root & body)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+:root {
+  // Polices
+  --font-text-theme: #{a.$font-family-sans};
+  --font-monospace-theme: #{a.$font-family-mono};
+
+  // Rayons de courbure
+  --radius-s: #{a.$radius-sm};
+  --radius-m: #{a.$radius-md};
+  --radius-l: #{a.$radius-lg};
+  --radius-xl: #{a.$radius-xl};
+  --input-radius: #{a.$radius-md};
+
+  // Espacements et dimensions
+  --size-4-1: #{a.$spacing-1};
+  --size-4-2: #{a.$spacing-2};
+  --size-4-3: #{a.$spacing-3};
+  --size-4-4: #{a.$spacing-4};
+
+  // Épaisseur de bordure
+  --border-width: 1px;
+
+  // Curseur de saisie & sélection
+  --caret-color: #{a.$color-palenight-accent};
+
+  // Transitions
+  --anim-duration-fast: 150ms;
+  --anim-duration-moderate: 250ms;
+}
+
+body {
+  // Scrollbar styling global
+  @include a.custom-scrollbar;
+}

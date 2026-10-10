@@ -1,0 +1,86 @@
+// =============================================================================
+// Components: Explorateur de Fichiers & Arborescence (BEM)
+// Block: .ob-tree-view | Elements: __folder, __file, __icon, __title
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-tree-view {
+  font-size: a.$font-size-sm;
+  color: var(--nav-item-color);
+
+  &__folder {
+    margin-bottom: 2px;
+    transform: none;
+  }
+
+  &__file {
+    display: flex;
+    align-items: center;
+    gap: a.$spacing-2;
+    padding: a.$spacing-1 a.$spacing-2;
+    border-radius: a.$radius-sm;
+    cursor: pointer;
+    transform: none;
+    transition: background-color a.$transition-fast, color a.$transition-fast;
+
+    &:hover {
+      background-color: var(--nav-item-background-hover);
+      color: var(--nav-item-color-hover);
+    }
+  }
+
+  &__icon {
+    color: var(--text-muted);
+  }
+
+  &__title {
+    @include a.text-truncate;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec l'explorateur natif d'Obsidian
+// -----------------------------------------------------------------------------
+
+// Réinitialisation stricte de la position de base pour éviter tout décalage cumulatif
+// vers la droite lors du dépliement / repliement répété des dossiers
+.nav-file,
+.nav-folder,
+.nav-folder-children,
+.nav-file-title,
+.nav-folder-title {
+  transform: none !important;
+}
+
+.nav-folder-children {
+  position: static;
+  left: 0 !important;
+}
+
+.nav-file,
+.nav-folder {
+  font-size: a.$font-size-sm;
+
+  .nav-file-title,
+  .nav-folder-title {
+    border-radius: a.$radius-sm;
+    color: var(--nav-item-color);
+    left: 0;
+    // La transition ne doit UNIQUEMENT cibler que la couleur pour ne jamais
+    // animer de padding, margin ou transform géométrique
+    transition: background-color a.$transition-fast, color a.$transition-fast !important;
+    transition-property: background-color, color !important;
+
+    &:hover {
+      background-color: var(--nav-item-background-hover);
+      color: var(--nav-item-color-hover);
+    }
+  }
+
+  .nav-file-title.is-active {
+    background-color: var(--nav-item-background-active);
+    color: var(--nav-item-color-active);
+    font-weight: a.$font-weight-medium;
+  }
+}

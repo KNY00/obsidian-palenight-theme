@@ -1,0 +1,66 @@
+// =============================================================================
+// Components: Tags & Étiquettes (BEM)
+// Block: .ob-tag | Elements: __prefix, __label | Modifiers: --pill, --active
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  padding: 0.15em 0.55em;
+  font-family: inherit;
+  font-size: a.$font-size-xs;
+  font-weight: a.$font-weight-medium;
+  color: var(--tag-color, a.$color-palenight-teal);
+  background-color: var(--tag-background);
+  border: 1px solid var(--tag-border-color);
+  border-radius: a.$radius-sm;
+  text-decoration: none;
+  transition: all a.$transition-fast;
+  vertical-align: baseline;
+
+  &:hover {
+    background-color: var(--tag-background-hover);
+    color: var(--tag-color, a.$color-palenight-teal);
+    text-decoration: none;
+  }
+
+  &__prefix {
+    opacity: 0.7;
+  }
+
+  // Modificateurs
+  &--pill {
+    border-radius: a.$radius-full;
+  }
+
+  &--active {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: transparent;
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les tags natifs d'Obsidian (.tag)
+// -----------------------------------------------------------------------------
+a.tag,
+.tag {
+  color: var(--tag-color, a.$color-palenight-teal);
+  background-color: var(--tag-background);
+  border: 1px solid var(--tag-border-color);
+  border-radius: a.$radius-sm;
+  padding: 2px 6px;
+  font-size: 0.85em;
+  font-weight: a.$font-weight-medium;
+  text-decoration: none;
+  transition: all a.$transition-fast;
+
+  &:hover {
+    background-color: var(--tag-background-hover);
+    color: var(--tag-color, a.$color-palenight-teal);
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,131 @@
+// =============================================================================
+// Base: Typographie & Styles de texte Markdown
+// =============================================================================
+
+@use "../abstracts" as a;
+
+body {
+  font-family: var(--font-text, a.$font-family-sans);
+  font-size: var(--font-text-size, a.$font-size-base);
+  line-height: var(--line-height-normal, a.$line-height-normal);
+  color: var(--text-normal);
+}
+
+// Titres Markdown dans l'éditeur et le lecteur
+.markdown-rendered h1,
+.cm-header-1 {
+  font-size: a.$font-size-3xl;
+  font-weight: a.$font-weight-bold;
+  color: var(--h1-color, a.$color-palenight-orange);
+  line-height: a.$line-height-tight;
+  margin-top: a.$spacing-8;
+  margin-bottom: a.$spacing-4;
+  letter-spacing: -0.02em;
+}
+
+.markdown-rendered h2,
+.cm-header-2 {
+  font-size: a.$font-size-2xl;
+  font-weight: a.$font-weight-semibold;
+  color: var(--h2-color, a.$color-palenight-purple);
+  line-height: a.$line-height-tight;
+  margin-top: a.$spacing-6;
+  margin-bottom: a.$spacing-3;
+  letter-spacing: -0.01em;
+}
+
+.markdown-rendered h3,
+.cm-header-3 {
+  font-size: a.$font-size-xl;
+  font-weight: a.$font-weight-semibold;
+  color: var(--h3-color, a.$color-palenight-teal);
+  line-height: a.$line-height-normal;
+  margin-top: a.$spacing-5;
+  margin-bottom: a.$spacing-2;
+}
+
+.markdown-rendered h4,
+.cm-header-4 {
+  font-size: a.$font-size-lg;
+  font-weight: a.$font-weight-medium;
+  color: var(--h4-color, a.$color-palenight-yellow);
+  line-height: a.$line-height-normal;
+  margin-top: a.$spacing-4;
+  margin-bottom: a.$spacing-2;
+}
+
+.markdown-rendered h5,
+.cm-header-5 {
+  font-size: a.$font-size-base;
+  font-weight: a.$font-weight-medium;
+  color: var(--h5-color, a.$color-palenight-blue);
+  line-height: a.$line-height-normal;
+  margin-top: a.$spacing-3;
+  margin-bottom: a.$spacing-1;
+}
+
+.markdown-rendered h6,
+.cm-header-6 {
+  font-size: a.$font-size-sm;
+  font-weight: a.$font-weight-medium;
+  color: var(--h6-color, a.$color-palenight-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: a.$spacing-3;
+  margin-bottom: a.$spacing-1;
+}
+
+// Paragraphes
+p {
+  margin-top: 0;
+  margin-bottom: a.$spacing-4;
+}
+
+// Liens internes & externes (alignés sur la couleur de H5)
+a,
+.internal-link,
+.external-link {
+  color: var(--link-color, var(--h5-color));
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color a.$transition-fast, border-color a.$transition-fast;
+
+  &:hover {
+    color: var(--link-color-hover, a.$color-palenight-cyan);
+    border-bottom-color: currentColor;
+    text-decoration: none;
+  }
+}
+
+// Code en ligne (Inline Code)
+code:not([class*="language-"]) {
+  font-family: var(--font-monospace, a.$font-family-mono);
+  font-size: 0.9em;
+  background-color: var(--code-background, a.$color-palenight-bg-dark);
+  color: var(--code-normal, a.$color-palenight-orange);
+  padding: 0.15em 0.4em;
+  border-radius: a.$radius-sm;
+  border: 1px solid var(--background-modifier-border);
+}
+
+// Citations (Blockquotes)
+blockquote {
+  margin: a.$spacing-4 0;
+  padding: a.$spacing-2 a.$spacing-4;
+  border-left: 4px solid var(--interactive-accent, a.$color-palenight-accent);
+  background-color: rgba(126, 87, 194, 0.06);
+  color: var(--text-muted);
+  border-radius: 0 a.$radius-md a.$radius-md 0;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+// Séparateur horizontal
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--divider-color, a.$color-palenight-border);
+  margin: a.$spacing-8 0;
+}

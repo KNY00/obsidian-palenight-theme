@@ -1,0 +1,47 @@
+// =============================================================================
+// Pages: Panneau de réglages / Préférences Obsidian
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.vertical-tab-header {
+  background-color: var(--background-secondary);
+  border-right: 1px solid var(--divider-color);
+
+  .vertical-tab-nav-item {
+    border-radius: a.$radius-sm;
+    color: var(--nav-item-color);
+    transition: all a.$transition-fast;
+
+    &:hover {
+      background-color: var(--nav-item-background-hover);
+      color: var(--nav-item-color-hover);
+    }
+
+    &.is-active {
+      background-color: var(--nav-item-background-active);
+      color: var(--nav-item-color-active);
+      font-weight: a.$font-weight-medium;
+    }
+  }
+}
+
+.vertical-tab-content-container {
+  background-color: var(--background-primary);
+  padding: a.$spacing-8;
+
+  .setting-item {
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding: a.$spacing-4 0;
+
+    .setting-item-name {
+      font-weight: a.$font-weight-medium;
+      color: var(--text-bright, a.$color-palenight-text-bright);
+    }
+
+    .setting-item-description {
+      font-size: a.$font-size-xs;
+      color: var(--text-muted);
+    }
+  }
+}

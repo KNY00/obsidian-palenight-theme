@@ -1,0 +1,91 @@
+// =============================================================================
+// Components: Tableaux Markdown (BEM)
+// Block: .ob-table | Elements: __head, __row, __cell | Modifiers: --striped
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.ob-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: a.$spacing-4 0;
+  font-size: a.$font-size-sm;
+
+  &__head {
+    background-color: var(--background-secondary-alt);
+    border-bottom: 2px solid var(--background-modifier-border);
+
+    th {
+      font-weight: a.$font-weight-semibold;
+      color: var(--text-bright, a.$color-palenight-text-bright);
+      padding: a.$spacing-2 a.$spacing-4;
+      text-align: left;
+    }
+  }
+
+  &__row {
+    border-bottom: 1px solid var(--background-modifier-border);
+    transition: background-color a.$transition-fast;
+
+    &:hover {
+      background-color: var(--background-modifier-hover);
+    }
+  }
+
+  &__cell {
+    padding: a.$spacing-2 a.$spacing-4;
+    color: var(--text-normal);
+  }
+
+  // Modificateurs
+  &--striped {
+    tbody tr:nth-child(even) {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+  }
+}
+
+// -----------------------------------------------------------------------------
+// Mapping avec les tableaux natifs d'Obsidian
+// -----------------------------------------------------------------------------
+.markdown-rendered table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: a.$spacing-4 0;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: a.$radius-md;
+  overflow: hidden;
+
+  thead {
+    background-color: var(--background-secondary-alt);
+    border-bottom: 2px solid var(--background-modifier-border);
+
+    th {
+      padding: a.$spacing-3 a.$spacing-4;
+      font-weight: a.$font-weight-semibold;
+      color: var(--text-bright, a.$color-palenight-text-bright);
+      border: 1px solid var(--background-modifier-border);
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--background-modifier-border);
+      transition: background-color a.$transition-fast;
+
+      &:hover {
+        background-color: var(--background-modifier-hover);
+      }
+
+      &:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.015);
+      }
+    }
+
+    td {
+      padding: a.$spacing-2 a.$spacing-4;
+      color: var(--text-normal);
+      border: 1px solid var(--background-modifier-border);
+    }
+  }
+}

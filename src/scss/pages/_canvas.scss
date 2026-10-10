@@ -1,0 +1,28 @@
+// =============================================================================
+// Pages: Vue Canvas Obsidian
+// =============================================================================
+
+@use "../abstracts" as a;
+
+.canvas-wrapper {
+  background-color: var(--background-primary-alt);
+
+  .canvas-node {
+    border-radius: a.$radius-lg;
+    border: 1px solid var(--background-modifier-border);
+    @include a.elevation(2);
+    transition: box-shadow a.$transition-fast, border-color a.$transition-fast;
+
+    &.is-focused {
+      border-color: var(--interactive-accent);
+      @include a.elevation(3);
+    }
+  }
+
+  .canvas-control-group {
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: a.$radius-md;
+    @include a.elevation(2);
+  }
+}

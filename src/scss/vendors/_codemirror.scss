@@ -1,0 +1,94 @@
+// =============================================================================
+// Vendors: Intégration CodeMirror 6 & Coloration syntaxique Palenight
+// =============================================================================
+
+@use "../abstracts" as a;
+
+// Alignement précis avec la syntaxe VS Code Palenight
+.cm-s-obsidian,
+.markdown-source-view.mod-cm6 {
+  // Ligne active / en surbrillance
+  .cm-activeLine {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+
+  // Numéros de ligne (Gutter)
+  .cm-gutters {
+    background-color: var(--background-primary);
+    border-right: 1px solid var(--background-modifier-border);
+    color: a.$color-palenight-text-faint;
+  }
+
+  .cm-activeLineGutter {
+    color: a.$color-palenight-text-bright;
+    background-color: transparent;
+  }
+
+  // Curseur
+  .cm-cursor {
+    border-left: 2px solid var(--caret-color, a.$color-palenight-accent);
+  }
+
+  // Sélection de texte
+  .cm-selectionBackground,
+  &::selection {
+    background-color: a.$color-palenight-bg-active !important;
+  }
+
+  // Tokens syntaxiques Palenight
+  .cm-keyword {
+    color: a.$color-palenight-purple !important; // #C792EA
+    font-style: italic;
+  }
+
+  .cm-operator {
+    color: a.$color-palenight-cyan !important; // #89DDFF
+  }
+
+  .cm-variable,
+  .cm-variable-2 {
+    color: a.$color-palenight-yellow !important; // #FFCB6B
+  }
+
+  .cm-def,
+  .cm-function {
+    color: a.$color-palenight-blue !important; // #82AAFF
+  }
+
+  .cm-string {
+    color: a.$color-palenight-green !important; // #C3E88D
+  }
+
+  .cm-number {
+    color: a.$color-palenight-orange !important; // #F78C6C
+  }
+
+  .cm-comment {
+    color: a.$color-palenight-text-muted !important; // #676E95
+    font-style: italic;
+  }
+
+  .cm-tag {
+    color: a.$color-palenight-red !important; // #FF5370
+  }
+
+  .cm-attribute {
+    color: a.$color-palenight-yellow !important; // #FFCB6B
+  }
+
+  .cm-property {
+    color: a.$color-palenight-teal !important; // #80CBC4
+  }
+
+  .cm-atom,
+  .cm-builtin {
+    color: a.$color-palenight-blue !important; // #82AAFF
+  }
+
+  // Liens dans l'éditeur (couleur H5)
+  .cm-link,
+  .cm-hmd-internal-link,
+  .cm-url {
+    color: var(--link-color, var(--h5-color)) !important;
+  }
+}

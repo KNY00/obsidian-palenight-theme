@@ -1,0 +1,48 @@
+// =============================================================================
+// Layout: Volets latéraux (Sidebars gauche & droite, Sidedocks)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+// Conteneurs des volets latéraux
+.mod-left-split,
+.mod-right-split,
+.mod-sidedock,
+.mod-sideblock {
+  background-color: var(--background-secondary);
+
+  .workspace-tab-header-container {
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--divider-color);
+  }
+}
+
+// Bordure de délimitation sur le volet latéral gauche vers la fenêtre centrale
+.workspace-split.mod-left-split,
+.mod-left-split,
+.workspace-sidedock.mod-left,
+.mod-sidedock.mod-left,
+.mod-sideblock.mod-left {
+  border-right: 1px solid var(--divider-color);
+}
+
+// Bordure de délimitation sur le volet latéral droit vers la fenêtre centrale
+.workspace-split.mod-right-split,
+.mod-right-split,
+.workspace-sidedock.mod-right,
+.mod-sidedock.mod-right,
+.mod-sideblock.mod-right {
+  border-left: 1px solid var(--divider-color);
+}
+
+// Arrière-plans des feuilles
+.workspace-leaf-content {
+  background-color: var(--background-primary);
+}
+
+.mod-left-split .workspace-leaf-content,
+.mod-right-split .workspace-leaf-content,
+.mod-sidedock .workspace-leaf-content,
+.mod-sideblock .workspace-leaf-content {
+  background-color: var(--background-secondary);
+}
