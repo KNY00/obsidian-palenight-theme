@@ -1,5 +1,8 @@
 # Obsidian Material Palenight Theme
 
+![Obsidian Palenight by KNY00](screenshots/screenshot-palenight-obsidian.webp)
+*Obsidian Palenight by KNY00*
+
 A polished and modern theme for [Obsidian](https://obsidian.md/), faithfully inspired by the color palette of the renowned VS Code **Material Palenight** theme created by Olaolu Olawuyi.
 
 ---
@@ -91,14 +94,3 @@ All commands are managed through `npm`:
 | `npm run build:min` | Compiles and minifies `theme.css` for production release |
 | `npm run watch` (or `npm run dev`) | Watches `.scss` source files and recompiles automatically on change |
 
----
-
-## 📐 Design & Implementation Methodologies
-
-1. **BEM (Block Element Modifier):** Components are structured as modular, independent blocks (e.g. `.ob-btn`, `.ob-btn__icon`, `.ob-btn--cta`, `.ob-modal`, `.ob-callout`) seamlessly mapped to Obsidian internal selectors.
-2. **7-1 Pattern:** Organized across 7 specialized directories for strict separation of concerns.
-3. **Isolated Components:** Every UI element (buttons, inputs, modals, callouts, tables, tree views, etc.) maintains its own dedicated SCSS stylesheet.
-4. **Centralized Design Tokens:** All colors, typographic scales, elevations, and transitions are declared in `abstracts/_variables.scss` and imported via `@use`.
-5. **Reusable SCSS Mixins:** Standardized elevation system (`@include elevation(n)`), focus rings, custom scrollbars, and interactive transitions in `abstracts/_mixins.scss`.
-6. **Utility System & `@apply` Paradigm:** A dedicated `abstracts/_utilities.scss` module provides an `@include apply(...)` mixin to compose atomic utilities (e.g., `flex-center`, `rounded-md`, `shadow-sm`).
-7. **Responsive & Mobile Layout:** Dedicated drawer and backdrop z-index management (`layout/_mobile.scss`) ensuring clean stacking layers across desktop, tablet, and mobile devices.
