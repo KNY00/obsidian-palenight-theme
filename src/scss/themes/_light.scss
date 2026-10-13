@@ -59,11 +59,13 @@
   --interactive-success:  #388E3C;
 
   // Tabs
-  --tab-background-active:     #{a.$color-light-bg};
-  --tab-text-color-active:     #{a.$color-light-text-bright};
-  --tab-background-inactive:   #{a.$color-light-bg-sidebar};
-  --tab-text-color-inactive:   #{a.$color-light-text-muted};
-  --tab-outline-color:         #{a.$color-light-border};
+  --tab-container-background:  #{a.$color-light-bg-tab-container};     // #ECEFF1 (Material Lighter)
+  --tab-background-active:     #{a.$color-light-bg};                   // #FAFAFA
+  --tab-text-color-active:     #{a.$color-light-text-bright};          // #18191E
+  --tab-background-inactive:   #{a.$color-light-bg-tab-inactive};      // #ECEFF1
+  --tab-background-hover:      #{a.$color-light-bg-tab-hover};         // #DFE3E8
+  --tab-text-color-inactive:   #{a.$color-light-text-muted};           // #6A737D
+  --tab-outline-color:         #{a.$color-light-border};               // #D0D4DF
 
   // Toolbars, Status Bar & Ribbon
   --ribbon-background:         #{a.$color-light-bg-sidebar};
@@ -89,4 +91,8 @@
   --tag-color:                 #00897B;
   --tag-background:            rgba(0, 137, 123, 0.1);
   --tag-background-hover:      rgba(0, 137, 123, 0.2);
+}
+
+.tooltip {
+  color: var(--text-normal);
 }

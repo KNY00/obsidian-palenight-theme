@@ -12,7 +12,7 @@
   background-color: var(--background-secondary);
 
   .workspace-tab-header-container {
-    background-color: var(--background-secondary);
+    background-color: var(--background-secondary) !important;
     border-bottom: 1px solid var(--divider-color);
   }
 }

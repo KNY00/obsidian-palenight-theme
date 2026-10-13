@@ -3,7 +3,6 @@
 // Block: .ob-tab | Elements: __title, __close, __icon | Modifiers: --active, --pinned
 // =============================================================================
 
-@use "sass:color";
 @use "../abstracts" as a;
 
 .ob-tab {
@@ -11,7 +10,7 @@
   align-items: center;
   gap: a.$spacing-2;
   padding: a.$spacing-2 a.$spacing-4;
-  background-color: #31364a;
+  background-color: var(--tab-background-inactive);
   color: var(--tab-text-color-inactive);
   border: none;
   cursor: pointer;
@@ -20,7 +19,7 @@
 
   &:hover {
     color: var(--tab-text-color-active);
-    background-color: color.adjust(#31364a, $lightness: 3%);
+    background-color: var(--tab-background-hover);
   }
 
   &__title {
@@ -44,7 +43,7 @@
 
   // BEM Modifiers
   &--active {
-    background-color: var(--background-primary); // Same background as workspace root
+    background-color: var(--tab-background-active, var(--background-primary)); // Same background as workspace root
     color: var(--tab-text-color-active);
     border: none;
   }
@@ -60,15 +59,15 @@
 // Mapping with native Obsidian tabs (Top tab bar)
 // -----------------------------------------------------------------------------
 
-// Tab navigation bar (top navbar): background #31364a
+// Tab navigation bar (top navbar)
 .workspace-tab-header-container {
-  background-color: #31364a !important;
+  background-color: var(--tab-container-background) !important;
   border-bottom: 1px solid var(--divider-color);
 }
 
-// Inactive tabs: background #31364a, without purple borders
+// Inactive tabs
 .workspace-tab-header {
-  background-color: #31364a;
+  background-color: var(--tab-background-inactive);
   color: var(--tab-text-color-inactive);
   border: none !important;
   border-top: none !important;
@@ -76,12 +75,12 @@
 
   &:hover:not(.is-active) {
     color: var(--tab-text-color-active);
-    background-color: color.adjust(#31364a, $lightness: 4%);
+    background-color: var(--tab-background-hover);
   }
 
-  // Only active tab matches the workspace root background (#292D3E), without purple borders
+  // Only active tab matches the workspace root background, without purple borders
   &.is-active {
-    background-color: var(--background-primary) !important;
+    background-color: var(--tab-background-active, var(--background-primary)) !important;
     color: var(--tab-text-color-active) !important;
     border: none !important;
     border-top: none !important;

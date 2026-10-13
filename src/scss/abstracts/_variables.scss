@@ -9,7 +9,9 @@ $color-palenight-bg:              #292D3E; // Primary editor background
 $color-palenight-bg-dark:         #232635; // Dark containers, peek view, widget shadow
 $color-palenight-bg-sidebar:      #282C3D; // Sidebars, activity bar, status bar
 $color-palenight-bg-alt:          #262A39; // Dividers, header tab borders
+$color-palenight-bg-tab-container: #31364A; // Tab container background
 $color-palenight-bg-tab-inactive: #31364A; // Inactive tabs
+$color-palenight-bg-tab-hover:    #383E55; // Inactive tab hover (lightened #31364A)
 $color-palenight-bg-elevated:     #32374C; // Popups, menus, modals
 $color-palenight-bg-input:        #414863; // Form fields, inputs
 $color-palenight-bg-hover:        #2E3245; // Hover state for lists and elements
@@ -48,6 +50,9 @@ $color-palenight-divider:         #393e55; // Sharp, contrasted divider between 
 $color-light-bg:                  #FAFAFA;
 $color-light-bg-alt:              #F0F0F5;
 $color-light-bg-sidebar:          #E8EAF0;
+$color-light-bg-tab-container:    #ECEFF1; // Material Lighter tabs container (blue-grey-50)
+$color-light-bg-tab-inactive:     #ECEFF1; // Inactive tabs
+$color-light-bg-tab-hover:        #DFE3E8; // Inactive tab hover
 $color-light-bg-elevated:         #FFFFFF;
 $color-light-bg-input:            #E3E6EF;
 $color-light-bg-hover:            #E5E8F2;

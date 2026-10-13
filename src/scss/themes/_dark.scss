@@ -58,9 +58,11 @@
   --interactive-success:  #{a.$color-palenight-green};
 
   // Tabs
+  --tab-container-background:  #{a.$color-palenight-bg-tab-container}; // #31364A
   --tab-background-active:     #{a.$color-palenight-bg};               // #292D3E
   --tab-text-color-active:     #{a.$color-palenight-text-bright};      // #EEFFFF
   --tab-background-inactive:   #{a.$color-palenight-bg-tab-inactive};  // #31364A
+  --tab-background-hover:      #{a.$color-palenight-bg-tab-hover};     // #383E55
   --tab-text-color-inactive:   #{a.$color-palenight-text-muted};       // #676E95
   --tab-outline-color:         #{a.$color-palenight-border};
 
