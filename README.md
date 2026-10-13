@@ -34,6 +34,8 @@ The project follows the standard **7-1 architecture pattern**, ensuring optimal 
 obsidian-theme/
 ├── manifest.json              # Obsidian theme metadata
 ├── package.json               # Build scripts & dependencies
+├── versions.json              # Version release compatibility map
+├── version-bump.mjs           # Version bump synchronization script
 ├── theme.css                  # Compiled theme output loaded by Obsidian
 └── src/
     └── scss/
@@ -93,4 +95,5 @@ All commands are managed through `npm`:
 | `npm run build` | Compiles `src/scss/main.scss` into `theme.css` in expanded readable format |
 | `npm run build:min` | Compiles and minifies `theme.css` for production release |
 | `npm run watch` (or `npm run dev`) | Watches `.scss` source files and recompiles automatically on change |
+| `npm run version` | Synchronizes version across `package.json`, `manifest.json`, and `versions.json` |
 

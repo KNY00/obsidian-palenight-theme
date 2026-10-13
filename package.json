@@ -1,13 +1,14 @@
 {
   "name": "obsidian-theme-palenight",
-  "version": "1.0.0",
+  "version": "0.2.0",
   "description": "A polished Obsidian theme inspired by the VS Code Material Palenight color palette.",
   "main": "theme.css",
   "scripts": {
     "build": "sass src/scss/main.scss theme.css --no-source-map --style=expanded",
     "build:min": "sass src/scss/main.scss theme.css --no-source-map --style=compressed",
     "watch": "sass src/scss/main.scss theme.css --watch --no-source-map",
-    "dev": "npm run watch"
+    "dev": "npm run watch",
+    "version": "node version-bump.mjs && git add manifest.json versions.json 2>/dev/null || true"
   },
   "keywords": [
     "obsidian",
