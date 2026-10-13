@@ -1,12 +1,12 @@
 // =============================================================================
-// Components: Boutons (Méthodologie BEM)
+// Components: Buttons (BEM Methodology)
 // Block: .ob-btn | Modifiers: --cta, --warning, --ghost, --disabled
 // =============================================================================
 
 @use "sass:color";
 @use "../abstracts" as a;
 
-// Définition BEM du composant Bouton
+// BEM Component Definition for Buttons
 .ob-btn {
   @include a.flex-center;
   gap: a.$spacing-2;
@@ -38,7 +38,7 @@
     transform: translateY(1px);
   }
 
-  // Éléments du bouton
+  // Button elements
   &__icon {
     display: inline-flex;
     align-items: center;
@@ -51,7 +51,7 @@
     display: inline-block;
   }
 
-  // Modificateurs de variante
+  // Variant modifiers
   &--cta {
     background-color: var(--interactive-accent);
     color: var(--text-on-accent);
@@ -92,7 +92,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les classes natives Obsidian
+// Mapping with native Obsidian classes
 // -----------------------------------------------------------------------------
 button,
 .mod-cta,

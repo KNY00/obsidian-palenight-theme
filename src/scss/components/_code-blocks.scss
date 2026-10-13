@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Blocs de Code & Coloration Syntaxique Palenight (BEM)
+// Components: Code Blocks & Palenight Syntax Styling (BEM)
 // Block: .ob-code-block | Elements: __header, __lang, __copy, __content
 // =============================================================================
 
@@ -55,7 +55,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les blocs de code natifs Markdown Obsidian
+// Mapping with native Obsidian Markdown code blocks
 // -----------------------------------------------------------------------------
 .markdown-rendered pre {
   background-color: var(--code-background, a.$color-palenight-bg-dark);

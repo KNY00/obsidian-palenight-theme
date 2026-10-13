@@ -1,5 +1,5 @@
 // =============================================================================
-// Base: Typographie & Styles de texte Markdown
+// Base: Typography & Markdown Text Styles
 // =============================================================================
 
 @use "../abstracts" as a;
@@ -11,7 +11,7 @@ body {
   color: var(--text-normal);
 }
 
-// Titres Markdown dans l'éditeur et le lecteur
+// Markdown Headings in editor and reader
 .markdown-rendered h1,
 .cm-header-1 {
   font-size: a.$font-size-3xl;
@@ -75,13 +75,13 @@ body {
   margin-bottom: a.$spacing-1;
 }
 
-// Paragraphes
+// Paragraphs
 p {
   margin-top: 0;
   margin-bottom: a.$spacing-4;
 }
 
-// Liens internes & externes (alignés sur la couleur de H5)
+// Internal & External Links (aligned with H5 color)
 a,
 .internal-link,
 .external-link {
@@ -97,7 +97,7 @@ a,
   }
 }
 
-// Code en ligne (Inline Code)
+// Inline Code
 code:not([class*="language-"]) {
   font-family: var(--font-monospace, a.$font-family-mono);
   font-size: 0.9em;
@@ -108,7 +108,7 @@ code:not([class*="language-"]) {
   border: 1px solid var(--background-modifier-border);
 }
 
-// Citations (Blockquotes)
+// Blockquotes
 blockquote {
   margin: a.$spacing-4 0;
   padding: a.$spacing-2 a.$spacing-4;
@@ -122,7 +122,7 @@ blockquote {
   }
 }
 
-// Séparateur horizontal
+// Horizontal Rule
 hr {
   border: none;
   height: 1px;

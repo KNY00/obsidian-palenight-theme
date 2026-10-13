@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Tableaux Markdown (BEM)
+// Components: Markdown Tables (BEM)
 // Block: .ob-table | Elements: __head, __row, __cell | Modifiers: --striped
 // =============================================================================
 
@@ -37,7 +37,7 @@
     color: var(--text-normal);
   }
 
-  // Modificateurs
+  // Modifiers
   &--striped {
     tbody tr:nth-child(even) {
       background-color: rgba(255, 255, 255, 0.02);
@@ -46,7 +46,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les tableaux natifs d'Obsidian
+// Mapping with native Obsidian Tables
 // -----------------------------------------------------------------------------
 .markdown-rendered table {
   width: 100%;

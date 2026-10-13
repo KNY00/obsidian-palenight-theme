@@ -1,11 +1,11 @@
 // =============================================================================
-// Abstracts: Mixins SCSS complexes et réutilisables
+// Abstracts: Complex & Reusable SCSS Mixins
 // =============================================================================
 
 @use "variables" as v;
 
 // -----------------------------------------------------------------------------
-// Ombres portées & Élévation (Box-shadows complexes)
+// Drop Shadows & Elevation (Complex box-shadows)
 // -----------------------------------------------------------------------------
 @mixin elevation($level: 1) {
   @if $level == 1 {
@@ -22,7 +22,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Disposition Flexbox (raccourcis rapides)
+// Flexbox Layout Helpers
 // -----------------------------------------------------------------------------
 @mixin flex-center {
   display: flex;
@@ -42,7 +42,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Anneau de focus (Accessibilité & Style Palenight)
+// Focus Ring (Accessibility & Palenight Styling)
 // -----------------------------------------------------------------------------
 @mixin focus-ring($color: v.$color-palenight-border-focus, $offset: 2px) {
   outline: none;
@@ -51,7 +51,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Scrollbars personnalisées dans l'esprit VS Code Palenight
+// Custom Scrollbars matching VS Code Palenight aesthetic
 // -----------------------------------------------------------------------------
 @mixin custom-scrollbar(
   $thumb-bg: rgba(105, 76, 164, 0.4),
@@ -81,7 +81,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Tronquage de texte sur une seule ligne
+// Single-line text truncation
 // -----------------------------------------------------------------------------
 @mixin text-truncate {
   overflow: hidden;
@@ -90,7 +90,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Effet verre dépoli / Glassmorphism subtil
+// Subtle Frosted Glass / Glassmorphism Effect
 // -----------------------------------------------------------------------------
 @mixin glass-panel($bg: rgba(41, 45, 62, 0.85), $blur: 12px) {
   background-color: $bg;
@@ -99,7 +99,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// États interactifs fluides (Hover, Active, Focus)
+// Smooth Interactive States (Hover, Active, Focus)
 // -----------------------------------------------------------------------------
 @mixin interactive-state($bg-default, $bg-hover, $bg-active: null) {
   background-color: $bg-default;

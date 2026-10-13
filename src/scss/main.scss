@@ -1,26 +1,26 @@
 // =============================================================================
 // Obsidian Material Palenight Theme
-// Modèle architectural 7-1 (Point d'entrée unique)
-// Inspiré du thème VS Code Material Palenight par Olaolu Olawuyi
+// 7-1 Architectural Pattern (Single Entry Point)
+// Inspired by the VS Code Material Palenight theme by Olaolu Olawuyi
 // =============================================================================
 
-// 1. Abstracts (Variables, Fonctions, Mixins, Utilitaires)
+// 1. Abstracts (Variables, Functions, Mixins, Utilities)
 @use "abstracts";
 
-// 2. Base (Reset, Typographie globale, :root Obsidian)
+// 2. Base (Reset, Global Typography, Obsidian :root)
 @use "base";
 
-// 3. Components (Composants BEM modulaires : boutons, inputs, modals, callouts...)
+// 3. Components (Modular BEM Components: buttons, inputs, modals, callouts...)
 @use "components";
 
-// 4. Layout (Workspace, Sidebars, Header)
+// 4. Layout (Workspace, Sidebars, Header, Mobile)
 @use "layout";
 
-// 5. Pages (Panneau de configuration, Vue Canvas)
+// 5. Pages (Settings Panel, Canvas View)
 @use "pages";
 
-// 6. Themes (Thèmes Dark Palenight & Light)
+// 6. Themes (Dark Palenight & Light Themes)
 @use "themes";
 
-// 7. Vendors (Intégration CodeMirror 6)
+// 7. Vendors (CodeMirror 6 Syntax Highlighting Integration)
 @use "vendors";

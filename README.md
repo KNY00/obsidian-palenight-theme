@@ -1,51 +1,51 @@
 # Obsidian Material Palenight Theme
 
-Un thème soigné et moderne pour [Obsidian](https://obsidian.md/), fidèlement inspiré par la palette de couleurs du célèbre thème VS Code **Material Palenight** créé par Olaolu Olawuyi.
+A polished and modern theme for [Obsidian](https://obsidian.md/), faithfully inspired by the color palette of the renowned VS Code **Material Palenight** theme created by Olaolu Olawuyi.
 
 ---
 
-## 🎨 Palette de couleurs (Palenight)
+## 🎨 Color Palette (Palenight)
 
-| Rôle | Couleur | Hex |
+| Role | Description | Hex |
 | :--- | :--- | :--- |
-| **Fond principal** | Bleu nuit profond | `#292D3E` |
-| **Fonds secondaires / Barres latérales** | Nuance sombre | `#282C3D` / `#232635` |
-| **Texte principal** | Gris perle doux | `#BFC7D5` |
-| **Texte contrasté / Titres** | Blanc bleuté | `#EEFFFF` |
-| **Accent signature / Boutons / Curseur** | Violet Palenight | `#7E57C2` |
-| **H1 & Nombres** | Pêche / Orange | `#F78C6C` |
-| **H2 & Mots-clés** | Lilas / Pourpre | `#C792EA` |
-| **H3 & Tags / Propriétés** | Turquoise / Teal | `#80CBC4` |
-| **H4 & Variables / Classes** | Jaune ambre | `#FFCB6B` |
-| **H5 & Fonctions** | Bleu ciel | `#82AAFF` |
-| **H6 & Chaînes de caractères** | Vert tendre | `#C3E88D` |
-| **Erreurs & Avertissements critiques** | Rouge corail | `#FF5370` |
+| **Primary Background** | Deep midnight blue | `#292D3E` |
+| **Secondary Backgrounds / Sidebars** | Dark shades | `#282C3D` / `#232635` |
+| **Primary Text** | Soft pearl grey | `#BFC7D5` |
+| **Contrasting Text / Headings** | Crisp bluish white | `#EEFFFF` |
+| **Signature Accent / Buttons / Caret** | Palenight purple | `#7E57C2` |
+| **H1 & Numbers** | Peach / Orange | `#F78C6C` |
+| **H2 & Keywords** | Lilac / Purple | `#C792EA` |
+| **H3 & Tags / Properties** | Turquoise / Teal | `#80CBC4` |
+| **H4 & Variables / Classes** | Amber yellow | `#FFCB6B` |
+| **H5 & Functions** | Sky blue | `#82AAFF` |
+| **H6 & Strings** | Tender green | `#C3E88D` |
+| **Errors & Critical Warnings** | Coral red | `#FF5370` |
 
 ---
 
-## 🏗️ Architecture du projet (Modèle 7-1 SCSS)
+## 🏗️ Project Architecture (7-1 SCSS Pattern)
 
-Le projet adopte le standard architectural **7-1**, garantissant une modularité et une maintenabilité optimales :
+The project follows the standard **7-1 architecture pattern**, ensuring optimal modularity, maintainability, and scalability:
 
 ```text
 obsidian-theme/
-├── manifest.json              # Métadonnées du thème Obsidian
-├── package.json               # Scripts de build & dépendances
-├── theme.css                  # Fichier compilé final chargé par Obsidian
+├── manifest.json              # Obsidian theme metadata
+├── package.json               # Build scripts & dependencies
+├── theme.css                  # Compiled theme output loaded by Obsidian
 └── src/
     └── scss/
-        ├── abstracts/         # Variables, tokens, mixins, fonctions, utilitaires
+        ├── abstracts/         # Variables, tokens, mixins, functions, utilities
         │   ├── _variables.scss
         │   ├── _functions.scss
         │   ├── _mixins.scss
         │   ├── _utilities.scss
         │   └── _index.scss
-        ├── base/              # Styles globaux, typographie Markdown, :root
+        ├── base/              # Global styles, Markdown typography, :root variables
         │   ├── _reset.scss
         │   ├── _root.scss
         │   ├── _typography.scss
         │   └── _index.scss
-        ├── components/        # Un fichier par composant (Méthodologie BEM)
+        ├── components/        # Component modules (BEM methodology)
         │   ├── _buttons.scss
         │   ├── _inputs.scss
         │   ├── _modals.scss
@@ -59,44 +59,46 @@ obsidian-theme/
         │   ├── _graph.scss
         │   ├── _tree-view.scss
         │   └── _index.scss
-        ├── layout/            # Disposition de l'interface Obsidian
+        ├── layout/            # Obsidian interface layout & structural frames
         │   ├── _workspace.scss
         │   ├── _sidebar.scss
         │   ├── _header.scss
+        │   ├── _mobile.scss
         │   └── _index.scss
-        ├── pages/             # Écrans et vues spécifiques
+        ├── pages/             # Dedicated screens and views
         │   ├── _settings.scss
         │   ├── _canvas.scss
         │   └── _index.scss
-        ├── themes/            # Mappings de variables d'environnement
-        │   ├── _dark.scss     # Thème Palenight sombre
-        │   ├── _light.scss    # Variante Palenight claire
+        ├── themes/            # Environment variable mappings
+        │   ├── _dark.scss     # Palenight dark theme
+        │   ├── _light.scss    # Palenight light variant
         │   └── _index.scss
-        ├── vendors/           # Intégrations tierces
-        │   ├── _codemirror.scss # Coloration syntaxique CodeMirror 6
+        ├── vendors/           # Third-party integrations
+        │   ├── _codemirror.scss # CodeMirror 6 syntax highlighting
         │   └── _index.scss
-        └── main.scss          # Point d'entrée unique
+        └── main.scss          # Main Sass entry point
 ```
 
 ---
 
-## 🚀 Commandes de développement (`package.json`)
+## 🚀 Development Scripts (`package.json`)
 
-Toutes les commandes sont accessibles via `npm` :
+All commands are managed through `npm`:
 
-| Commande | Action |
+| Command | Action |
 | :--- | :--- |
-| `npm run build` | Compile `src/scss/main.scss` vers `theme.css` en mode étendu lisible |
-| `npm run build:min` | Compile et minifie le CSS (`theme.css`) pour la production |
-| `npm run watch` (ou `npm run dev`) | Surveille les modifications des fichiers `.scss` et recompile instantanément |
+| `npm run build` | Compiles `src/scss/main.scss` into `theme.css` in expanded readable format |
+| `npm run build:min` | Compiles and minifies `theme.css` for production release |
+| `npm run watch` (or `npm run dev`) | Watches `.scss` source files and recompiles automatically on change |
 
 ---
 
-## 📐 Méthodologies appliquées
+## 📐 Design & Implementation Methodologies
 
-1. **BEM (Block Element Modifier) :** Les composants sont modélisés sous forme de blocs indépendants (ex. `.ob-btn`, `.ob-btn__icon`, `.ob-btn--cta`, `.ob-modal`, `.ob-callout`) et couplés de manière transparente avec les classes internes d'Obsidian.
-2. **Modèle 7-1 :** Organisation en 7 dossiers thématiques pour une séparation claire des responsabilités.
-3. **Composants isolés :** Chaque élément de l'interface (boutons, formulaires, modales, encadrés, tableaux...) dispose de son propre fichier SCSS.
-4. **Design Tokens centralisés :** Toutes les couleurs, échelles typographiques, ombres et transitions sont définies dans `abstracts/_variables.scss` et partagées via `@use`.
-5. **Mixins SCSS réutilisables :** Gestion des ombres complexes (`@include elevation(n)`), anneaux de focus, défilements personnalisés, et états interactifs dans `abstracts/_mixins.scss`.
-6. **Utilitaires & Approche `@apply` :** Un module dédié `abstracts/_utilities.scss` implémente un mixin `@include apply(...)` permettant de composer facilement des utilitaires atomiques (ex: flex-center, rounded-md, shadow-sm).
+1. **BEM (Block Element Modifier):** Components are structured as modular, independent blocks (e.g. `.ob-btn`, `.ob-btn__icon`, `.ob-btn--cta`, `.ob-modal`, `.ob-callout`) seamlessly mapped to Obsidian internal selectors.
+2. **7-1 Pattern:** Organized across 7 specialized directories for strict separation of concerns.
+3. **Isolated Components:** Every UI element (buttons, inputs, modals, callouts, tables, tree views, etc.) maintains its own dedicated SCSS stylesheet.
+4. **Centralized Design Tokens:** All colors, typographic scales, elevations, and transitions are declared in `abstracts/_variables.scss` and imported via `@use`.
+5. **Reusable SCSS Mixins:** Standardized elevation system (`@include elevation(n)`), focus rings, custom scrollbars, and interactive transitions in `abstracts/_mixins.scss`.
+6. **Utility System & `@apply` Paradigm:** A dedicated `abstracts/_utilities.scss` module provides an `@include apply(...)` mixin to compose atomic utilities (e.g., `flex-center`, `rounded-md`, `shadow-sm`).
+7. **Responsive & Mobile Layout:** Dedicated drawer and backdrop z-index management (`layout/_mobile.scss`) ensuring clean stacking layers across desktop, tablet, and mobile devices.

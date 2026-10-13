@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Explorateur de Fichiers & Arborescence (BEM)
+// Components: File Explorer & Tree View (BEM)
 // Block: .ob-tree-view | Elements: __folder, __file, __icon, __title
 // =============================================================================
 
@@ -40,11 +40,11 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec l'explorateur natif d'Obsidian
+// Mapping with native Obsidian File Explorer
 // -----------------------------------------------------------------------------
 
-// Réinitialisation stricte de la position de base pour éviter tout décalage cumulatif
-// vers la droite lors du dépliement / repliement répété des dossiers
+// Strict position resets preventing cumulative indentation shifts to the right
+// upon repeated expanding / collapsing of folders
 .nav-file,
 .nav-folder,
 .nav-folder-children,
@@ -67,8 +67,7 @@
     border-radius: a.$radius-sm;
     color: var(--nav-item-color);
     left: 0;
-    // La transition ne doit UNIQUEMENT cibler que la couleur pour ne jamais
-    // animer de padding, margin ou transform géométrique
+    // Transitions target only color and background to avoid animating padding, margins, or transforms
     transition: background-color a.$transition-fast, color a.$transition-fast !important;
     transition-property: background-color, color !important;
 

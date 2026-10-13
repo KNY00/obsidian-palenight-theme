@@ -3,47 +3,47 @@
 // =============================================================================
 
 // -----------------------------------------------------------------------------
-// 1. Palette de Couleurs VS Code Palenight (Dark)
+// 1. VS Code Palenight Color Palette (Dark)
 // -----------------------------------------------------------------------------
-$color-palenight-bg:              #292D3E; // Editor background principal
-$color-palenight-bg-dark:         #232635; // Conteneurs sombres, peek view, widget shadow
-$color-palenight-bg-sidebar:      #282C3D; // Barres latérales, activity bar, status bar
-$color-palenight-bg-alt:          #262A39; // Délimiteurs, header tabs borders
-$color-palenight-bg-tab-inactive: #31364A; // Onglets inactifs
+$color-palenight-bg:              #292D3E; // Primary editor background
+$color-palenight-bg-dark:         #232635; // Dark containers, peek view, widget shadow
+$color-palenight-bg-sidebar:      #282C3D; // Sidebars, activity bar, status bar
+$color-palenight-bg-alt:          #262A39; // Dividers, header tab borders
+$color-palenight-bg-tab-inactive: #31364A; // Inactive tabs
 $color-palenight-bg-elevated:     #32374C; // Popups, menus, modals
-$color-palenight-bg-input:        #414863; // Champs de formulaire, inputs
-$color-palenight-bg-hover:        #2E3245; // Survol de listes / éléments
-$color-palenight-bg-active:       #3C435E; // Éléments actifs, sélections
+$color-palenight-bg-input:        #414863; // Form fields, inputs
+$color-palenight-bg-hover:        #2E3245; // Hover state for lists and elements
+$color-palenight-bg-active:       #3C435E; // Active items, selections
 
-// Palette Texte Palenight
-$color-palenight-text:            #BFC7D5; // Texte principal du code & lecture
-$color-palenight-text-bright:     #EEFFFF; // Titres, texte actif, contraste fort
-$color-palenight-text-muted:      #676E95; // Commentaires, métadonnées
-$color-palenight-text-faint:      #4C5374; // Numéros de ligne, bordures légères
-$color-palenight-text-disabled:   #545B7F; // Texte désactivé
-$color-palenight-text-white:      #FFFFFF; // Blanc pur pour badges / highlights
+// Palenight Text Palette
+$color-palenight-text:            #BFC7D5; // Primary text for code and reading
+$color-palenight-text-bright:     #EEFFFF; // Headings, active text, high contrast
+$color-palenight-text-muted:      #676E95; // Comments, metadata
+$color-palenight-text-faint:      #4C5374; // Line numbers, subtle borders
+$color-palenight-text-disabled:   #545B7F; // Disabled text
+$color-palenight-text-white:      #FFFFFF; // Pure white for badges and highlights
 
-// Palette Accents & Syntaxe Palenight
-$color-palenight-accent:          #7E57C2; // Violet signature Palenight (boutons, curseur, badges)
-$color-palenight-accent-hover:    #9370DB; // Violet accent hover
-$color-palenight-accent-subtle:   rgba(126, 87, 194, 0.2); // Surlignage violet translucide
-$color-palenight-purple:          #C792EA; // Lilas / mots-clés, headings h2
-$color-palenight-blue:            #82AAFF; // Bleu ciel / fonctions, liens, headings h1
-$color-palenight-cyan:            #89DDFF; // Cyan / opérateurs, ponctuation
-$color-palenight-teal:            #80CBC4; // Turquoise / regex, tags, headings h3
-$color-palenight-green:           #C3E88D; // Vert doux / chaînes de caractères, succès, h6
-$color-palenight-yellow:          #FFCB6B; // Jaune doré / variables, classes, warnings, h4
-$color-palenight-orange:          #F78C6C; // Orange pêche / nombres, constantes, h5
-$color-palenight-red:             #FF5370; // Rouge corail / erreurs, suppressions, critiques
+// Palenight Accent & Syntax Palette
+$color-palenight-accent:          #7E57C2; // Signature Palenight purple (buttons, caret, badges)
+$color-palenight-accent-hover:    #9370DB; // Purple accent hover
+$color-palenight-accent-subtle:   rgba(126, 87, 194, 0.2); // Translucent purple highlight
+$color-palenight-purple:          #C792EA; // Lilac / keywords, h2 headings
+$color-palenight-blue:            #82AAFF; // Sky blue / functions, links, h1 headings
+$color-palenight-cyan:            #89DDFF; // Cyan / operators, punctuation
+$color-palenight-teal:            #80CBC4; // Turquoise / regex, tags, h3 headings
+$color-palenight-green:           #C3E88D; // Soft green / strings, success, h6 headings
+$color-palenight-yellow:          #FFCB6B; // Golden yellow / variables, classes, warnings, h4 headings
+$color-palenight-orange:          #F78C6C; // Peach orange / numbers, constants, h5 headings
+$color-palenight-red:             #FF5370; // Coral red / errors, deletions, critical notices
 
-// Bordures & Délimiteurs Palenight
+// Palenight Borders & Dividers
 $color-palenight-border:          #282B3C;
 $color-palenight-border-light:    #383D55;
 $color-palenight-border-focus:    #7E57C2;
-$color-palenight-divider:         #393e55; // Délimiteur net et contrasté entre les volets
+$color-palenight-divider:         #393e55; // Sharp, contrasted divider between panes
 
 // -----------------------------------------------------------------------------
-// 2. Palette Dérivée Palenight Light (Mode Clair)
+// 2. Derived Palenight Light Palette (Light Mode)
 // -----------------------------------------------------------------------------
 $color-light-bg:                  #FAFAFA;
 $color-light-bg-alt:              #F0F0F5;
@@ -58,12 +58,12 @@ $color-light-text-bright:         #18191E;
 $color-light-text-muted:          #6A737D;
 $color-light-text-faint:          #959DA5;
 
-$color-light-accent:              #5E35B1; // Violet contrasté pour le jour
+$color-light-accent:              #5E35B1; // High-contrast purple for light theme
 $color-light-accent-hover:        #512DA8;
 $color-light-border:              #D0D4DF;
 
 // -----------------------------------------------------------------------------
-// 3. Typographie
+// 3. Typography
 // -----------------------------------------------------------------------------
 $font-family-sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Helvetica, Arial, sans-serif;
 $font-family-mono:  "Fira Code", "JetBrains Mono", Consolas, Menlo, Monaco, monospace;
@@ -88,7 +88,7 @@ $line-height-normal: 1.5;
 $line-height-relaxed: 1.75;
 
 // -----------------------------------------------------------------------------
-// 4. Espacements (Spacing Scale)
+// 4. Spacing Scale
 // -----------------------------------------------------------------------------
 $spacing-1: 0.25rem;  // 4px
 $spacing-2: 0.5rem;   // 8px
@@ -100,7 +100,7 @@ $spacing-8: 2rem;     // 32px
 $spacing-10: 2.5rem;  // 40px
 
 // -----------------------------------------------------------------------------
-// 5. Rayons de courbure (Border Radius)
+// 5. Border Radius
 // -----------------------------------------------------------------------------
 $radius-sm:   4px;
 $radius-md:   6px;
@@ -109,7 +109,7 @@ $radius-xl:   12px;
 $radius-full: 9999px;
 
 // -----------------------------------------------------------------------------
-// 6. Ombres portées (Box Shadows)
+// 6. Box Shadows
 // -----------------------------------------------------------------------------
 $shadow-sm: 0 1px 2px rgba(15, 17, 26, 0.4);
 $shadow-md: 0 4px 6px -1px rgba(15, 17, 26, 0.5), 0 2px 4px -1px rgba(15, 17, 26, 0.3);

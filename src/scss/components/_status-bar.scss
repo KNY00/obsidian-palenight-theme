@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Barre de Statut (BEM)
+// Components: Status Bar (BEM)
 // Block: .ob-status-bar | Elements: __item, __icon | Modifiers: --syncing
 // =============================================================================
 
@@ -39,7 +39,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec la barre de statut native d'Obsidian
+// Mapping with native Obsidian Status Bar
 // -----------------------------------------------------------------------------
 .status-bar {
   background-color: var(--status-bar-background);

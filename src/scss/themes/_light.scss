@@ -6,13 +6,13 @@
 @use "../abstracts" as a;
 
 .theme-light {
-  // Arrière-plans
+  // Backgrounds
   --background-primary:         #{a.$color-light-bg};
   --background-primary-alt:     #{a.$color-light-bg-alt};
   --background-secondary:       #{a.$color-light-bg-sidebar};
   --background-secondary-alt:   #{a.$color-light-bg-hover};
 
-  // Modificateurs d'arrière-plan
+  // Background Modifiers
   --background-modifier-hover:       rgba(0, 0, 0, 0.04);
   --background-modifier-active-hover: rgba(94, 53, 177, 0.1);
   --background-modifier-border:      #{a.$color-light-border};
@@ -27,10 +27,10 @@
   --background-modifier-box-shadow:  rgba(0, 0, 0, 0.1);
   --background-modifier-cover:       rgba(240, 240, 245, 0.8);
 
-  // Textes & Typographie
+  // Text & Typography
   --text-normal:          #{a.$color-light-text};
   --text-muted:           #{a.$color-light-text-muted};
-  --text-accent:          var(--h5-color);                             // #1E88E5 (aligné sur H5)
+  --text-accent:          var(--h5-color);                             // #1E88E5 (aligned with H5)
   --text-accent-hover:    #0288D1;
   --link-color:           var(--h5-color);                             // #1E88E5
   --link-color-hover:     #0288D1;
@@ -43,7 +43,7 @@
   --text-warning:         #F57F17;
   --text-success:         #388E3C;
 
-  // Titres
+  // Headings
   --h1-color: #E65100;
   --h2-color: #8E24AA;
   --h3-color: #00897B;
@@ -51,21 +51,21 @@
   --h5-color: #1E88E5;
   --h6-color: #43A047;
 
-  // Éléments Interactifs
+  // Interactive Elements
   --interactive-normal:   #{a.$color-light-bg-elevated};
   --interactive-hover:    #{a.$color-light-bg-hover};
   --interactive-accent:   #{a.$color-light-accent};
   --interactive-accent-hover: #{a.$color-light-accent-hover};
   --interactive-success:  #388E3C;
 
-  // Onglets
+  // Tabs
   --tab-background-active:     #{a.$color-light-bg};
   --tab-text-color-active:     #{a.$color-light-text-bright};
   --tab-background-inactive:   #{a.$color-light-bg-sidebar};
   --tab-text-color-inactive:   #{a.$color-light-text-muted};
   --tab-outline-color:         #{a.$color-light-border};
 
-  // Barres d'outils, Statut et Ribbon
+  // Toolbars, Status Bar & Ribbon
   --ribbon-background:         #{a.$color-light-bg-sidebar};
   --status-bar-background:     #{a.$color-light-bg-sidebar};
   --status-bar-text-color:     #{a.$color-light-text-muted};

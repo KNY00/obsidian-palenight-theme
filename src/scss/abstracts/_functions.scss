@@ -1,29 +1,29 @@
 // =============================================================================
-// Abstracts: Fonctions SCSS
+// Abstracts: SCSS Functions
 // =============================================================================
 
 @use "sass:color";
 @use "sass:math";
 
-/// Éclaircit subtilement une couleur hexadécimale
-/// @param {Color} $color - Couleur de départ
-/// @param {Number} $percentage - Pourcentage d'éclaircissement (0-100)
-/// @return {Color} Couleur éclaircie
+/// Subtly tints a hex color with white
+/// @param {Color} $color - Source color
+/// @param {Number} $percentage - Tint percentage (0-100)
+/// @return {Color} Tinted color
 @function tint($color, $percentage) {
   @return color.mix(#ffffff, $color, $percentage);
 }
 
-/// Assombrit subtilement une couleur hexadécimale
-/// @param {Color} $color - Couleur de départ
-/// @param {Number} $percentage - Pourcentage d'assombrissement (0-100)
-/// @return {Color} Couleur assombrie
+/// Subtly shades a hex color with black
+/// @param {Color} $color - Source color
+/// @param {Number} $percentage - Shade percentage (0-100)
+/// @return {Color} Shaded color
 @function shade($color, $percentage) {
   @return color.mix(#000000, $color, $percentage);
 }
 
-/// Convertit des pixels en REM basé sur une racine de 16px
-/// @param {Number} $px - Valeur en pixels
-/// @return {Number} Valeur en rem
+/// Converts pixel values to REM units based on a 16px root
+/// @param {Number} $px - Value in pixels
+/// @return {Number} Value in rem
 @function to-rem($px) {
   @return math.div($px, 16px) * 1rem;
 }

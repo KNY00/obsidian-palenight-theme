@@ -1,12 +1,12 @@
 // =============================================================================
-// Components: Champs de formulaire & Saisie (BEM)
+// Components: Form Fields & Inputs (BEM)
 // Block: .ob-input | Elements: __field, __icon | Modifiers: --search, --error
 // =============================================================================
 
 @use "../abstracts" as a;
 
 // -----------------------------------------------------------------------------
-// Composant BEM personnalisé (pour modules et extensions sur mesure)
+// Custom BEM Component (for custom modules and community extensions)
 // -----------------------------------------------------------------------------
 .ob-input {
   position: relative;
@@ -45,7 +45,7 @@
     pointer-events: none;
   }
 
-  // Modificateurs BEM
+  // BEM Modifiers
   &--search {
     .ob-input__field {
       padding-left: a.$spacing-8;
@@ -65,11 +65,11 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les contrôles natifs d'Obsidian (Préservation stricte du layout)
+// Mapping with native Obsidian controls (Strict layout preservation)
 // -----------------------------------------------------------------------------
 
-// 1. Text inputs & textareas : styles cosmétiques (couleurs, bordures, focus)
-// Sans écraser le padding interne natif d'Obsidian
+// 1. Text inputs & textareas: styling colors, borders, and focus rings
+// without overriding native padding
 input[type="text"],
 input[type="search"],
 input[type="password"],
@@ -96,8 +96,8 @@ textarea {
   }
 }
 
-// 2. Selects & Dropdowns : préserve entièrement le layout interne, la hauteur de ligne
-// et la marge du chevron SVG pour éviter que le texte ne soit masqué par les bordures
+// 2. Selects & Dropdowns: preserves native line-height, chevron spacing,
+// and layout to prevent clipped text
 select,
 .dropdown {
   font-family: inherit;
@@ -117,8 +117,8 @@ select,
   }
 }
 
-// 3. Conteneurs de recherche (Settings, File Explorer, Quick switcher) :
-// Garantit un espacement à gauche pour l'icône de loupe afin d'éviter tout chevauchement (overlap)
+// 3. Search input containers (Settings, File Explorer, Quick switcher):
+// Ensures proper inline padding for the magnifying glass icon to avoid text overlap
 .search-input-container {
   position: relative;
 
@@ -127,7 +127,6 @@ select,
     border: 1px solid var(--background-modifier-border);
     border-radius: var(--input-radius, #{a.$radius-md});
     color: var(--text-normal);
-    // Garantit l'alignement et le dégagement de l'icône loupe à gauche
     padding-inline-start: 30px !important;
     padding-inline-end: 28px !important;
 

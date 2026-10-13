@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Callouts / Encadrés Markdown (BEM)
+// Components: Callouts / Markdown Alert Boxes (BEM)
 // Block: .ob-callout | Elements: __title, __icon, __content | Modifiers: --note, --tip, --warning, --danger
 // =============================================================================
 
@@ -36,7 +36,7 @@
     }
   }
 
-  // Modificateurs de variante BEM
+  // BEM variant modifiers
   &--note {
     --callout-color: #{a.$color-palenight-blue};
     --callout-color-rgb: 130, 170, 255;
@@ -64,7 +64,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les Callouts natifs d'Obsidian
+// Mapping with native Obsidian Callouts
 // -----------------------------------------------------------------------------
 .callout {
   border-radius: a.$radius-md;

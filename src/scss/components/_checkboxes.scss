@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Cases à cocher & Listes de tâches (BEM)
+// Components: Checkboxes & Task Lists (BEM)
 // Block: .ob-checkbox | Modifiers: --checked, --custom
 // =============================================================================
 
@@ -48,7 +48,7 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les listes de tâches Markdown Obsidian
+// Mapping with native Obsidian Markdown Task Lists
 // -----------------------------------------------------------------------------
 .task-list-item {
   list-style-type: none;

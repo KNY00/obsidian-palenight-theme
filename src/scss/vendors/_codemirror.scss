@@ -1,18 +1,18 @@
 // =============================================================================
-// Vendors: Intégration CodeMirror 6 & Coloration syntaxique Palenight
+// Vendors: CodeMirror 6 Integration & Palenight Syntax Highlighting
 // =============================================================================
 
 @use "../abstracts" as a;
 
-// Alignement précis avec la syntaxe VS Code Palenight
+// Precise alignment with VS Code Palenight syntax
 .cm-s-obsidian,
 .markdown-source-view.mod-cm6 {
-  // Ligne active / en surbrillance
+  // Active / highlighted line
   .cm-activeLine {
     background-color: rgba(0, 0, 0, 0.2);
   }
 
-  // Numéros de ligne (Gutter)
+  // Gutter line numbers
   .cm-gutters {
     background-color: var(--background-primary);
     border-right: 1px solid var(--background-modifier-border);
@@ -24,18 +24,18 @@
     background-color: transparent;
   }
 
-  // Curseur
+  // Caret / cursor
   .cm-cursor {
     border-left: 2px solid var(--caret-color, a.$color-palenight-accent);
   }
 
-  // Sélection de texte
+  // Text selection
   .cm-selectionBackground,
   &::selection {
     background-color: a.$color-palenight-bg-active !important;
   }
 
-  // Tokens syntaxiques Palenight
+  // Palenight syntax tokens
   .cm-keyword {
     color: a.$color-palenight-purple !important; // #C792EA
     font-style: italic;
@@ -85,7 +85,7 @@
     color: a.$color-palenight-blue !important; // #82AAFF
   }
 
-  // Liens dans l'éditeur (couleur H5)
+  // Editor links (H5 color)
   .cm-link,
   .cm-hmd-internal-link,
   .cm-url {

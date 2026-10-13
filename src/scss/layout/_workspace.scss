@@ -1,10 +1,10 @@
 // =============================================================================
-// Layout: Conteneurs d'espace de travail (Workspace, Fenêtre centrale & Volets)
+// Layout: Workspace Containers (Workspace, Central Pane & Splits)
 // =============================================================================
 
 @use "../abstracts" as a;
 
-// Barre latérale d'outils / Ribbon Obsidian
+// Action bar / Obsidian Ribbon
 .workspace-ribbon {
   background-color: var(--ribbon-background);
   border-right: 1px solid var(--divider-color);
@@ -35,16 +35,16 @@
 }
 
 // -----------------------------------------------------------------------------
-// Délimitations de bordures entre volets latéraux et fenêtre centrale
+// Border dividers between sidebars and central workspace
 // -----------------------------------------------------------------------------
 
-// Fenêtre centrale : couleur de fond de base
+// Central workspace pane: base background color
 .workspace-split.mod-root,
 .mod-root {
   background-color: var(--background-primary);
 }
 
-// Délimitations et séparations exclusives à l'environnement Desktop
+// Desktop-exclusive dividers and separations
 body:not(.is-mobile) {
   .workspace-split.mod-root,
   .mod-root {
@@ -53,13 +53,14 @@ body:not(.is-mobile) {
     position: relative;
     z-index: 1;
 
-    // Séparations nettes au sein des subdivisions de la fenêtre centrale
+    // Clear separations within central pane vertical subdivisions
     &.mod-vertical > .workspace-split:not(:last-child),
     &.mod-vertical > .workspace-tabs:not(:last-child),
     &.mod-vertical > .workspace-leaf:not(:last-child) {
       border-right: 1px solid var(--divider-color);
     }
 
+    // Clear separations within central pane horizontal subdivisions
     &.mod-horizontal > .workspace-split:not(:last-child),
     &.mod-horizontal > .workspace-tabs:not(:last-child),
     &.mod-horizontal > .workspace-leaf:not(:last-child) {
@@ -78,7 +79,7 @@ body:not(.is-mobile) {
   }
 }
 
-// Séparateurs de volets redimensionnables (Splitters)
+// Resizable workspace split containers (Splitters)
 .workspace-split {
   &.mod-horizontal,
   &.mod-vertical {
@@ -86,7 +87,7 @@ body:not(.is-mobile) {
   }
 }
 
-// En-têtes d'onglets (délimitation nette sous les onglets)
+// Tab headers container (clear delimiter under tabs)
 .workspace-tab-header-container {
   border-bottom: 1px solid var(--divider-color);
 }

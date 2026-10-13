@@ -1,5 +1,5 @@
 // =============================================================================
-// Components: Onglets d'espace de travail (BEM)
+// Components: Workspace Tabs (BEM)
 // Block: .ob-tab | Elements: __title, __close, __icon | Modifiers: --active, --pinned
 // =============================================================================
 
@@ -42,9 +42,9 @@
     }
   }
 
-  // Modificateurs BEM
+  // BEM Modifiers
   &--active {
-    background-color: var(--background-primary); // Même background que le root
+    background-color: var(--background-primary); // Same background as workspace root
     color: var(--tab-text-color-active);
     border: none;
   }
@@ -57,16 +57,16 @@
 }
 
 // -----------------------------------------------------------------------------
-// Mapping avec les onglets natifs d'Obsidian (Barre d'onglets du haut)
+// Mapping with native Obsidian tabs (Top tab bar)
 // -----------------------------------------------------------------------------
 
-// Barre de navigation d'onglets (Navbar en haut) : background #31364a
+// Tab navigation bar (top navbar): background #31364a
 .workspace-tab-header-container {
   background-color: #31364a !important;
   border-bottom: 1px solid var(--divider-color);
 }
 
-// Onglets inactifs : background #31364a, sans bordure violette
+// Inactive tabs: background #31364a, without purple borders
 .workspace-tab-header {
   background-color: #31364a;
   color: var(--tab-text-color-inactive);
@@ -79,7 +79,7 @@
     background-color: color.adjust(#31364a, $lightness: 4%);
   }
 
-  // Seule la tab activée a le même background que le root (#292D3E), sans bordure violette
+  // Only active tab matches the workspace root background (#292D3E), without purple borders
   &.is-active {
     background-color: var(--background-primary) !important;
     color: var(--tab-text-color-active) !important;
@@ -87,7 +87,7 @@
     border-top: none !important;
     box-shadow: none !important;
 
-    // Élimine les pseudo-éléments arrondis d'Obsidian
+    // Remove Obsidian's rounded tab corner pseudo-elements
     &::before,
     &::after {
       display: none !important;
