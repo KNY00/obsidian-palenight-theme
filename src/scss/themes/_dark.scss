@@ -28,6 +28,7 @@
 
   // Text & Typography
   --text-normal:          #{a.$color-palenight-text};                  // #BFC7D5
+  --text-bright:          #{a.$color-palenight-text-bright};           // #EEFFFF (high contrast)
   --text-muted:           #{a.$color-palenight-text-muted};            // #676E95
   --text-accent:          var(--h5-color);                             // #82AAFF (aligned with H5)
   --text-accent-hover:    #{a.$color-palenight-cyan};                  // #89DDFF

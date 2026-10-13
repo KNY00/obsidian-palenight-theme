@@ -31,8 +31,9 @@
   // Border width
   --border-width: 1px;
 
-  // Text caret & selection
+  // Text tokens
   --caret-color: #{a.$color-palenight-accent};
+  --text-bright: var(--text-normal);
 
   // Transitions
   --anim-duration-fast: 150ms;

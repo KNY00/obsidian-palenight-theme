@@ -20,7 +20,7 @@
   }
 
   .cm-activeLineGutter {
-    color: a.$color-palenight-text-bright;
+    color: var(--text-bright, var(--text-normal));
     background-color: transparent;
   }
 

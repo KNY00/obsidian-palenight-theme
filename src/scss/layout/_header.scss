@@ -28,7 +28,7 @@
       transition: all a.$transition-fast;
 
       &:hover {
-        color: var(--text-bright, a.$color-palenight-text-bright);
+        color: var(--text-bright, var(--text-normal));
         background-color: var(--background-modifier-hover);
       }
     }

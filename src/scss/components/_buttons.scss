@@ -26,7 +26,7 @@
   &:hover {
     background-color: var(--interactive-hover);
     border-color: var(--background-modifier-border-hover);
-    color: var(--text-bright, a.$color-palenight-text-bright);
+    color: var(--text-bright, var(--text-normal));
     @include a.elevation(1);
   }
 

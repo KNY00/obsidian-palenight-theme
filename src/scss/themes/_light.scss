@@ -28,8 +28,9 @@
   --background-modifier-cover:       rgba(240, 240, 245, 0.8);
 
   // Text & Typography
-  --text-normal:          #{a.$color-light-text};
-  --text-muted:           #{a.$color-light-text-muted};
+  --text-normal:          #{a.$color-light-text};                      // #383A42
+  --text-bright:          #{a.$color-light-text-bright};               // #18191E (high contrast)
+  --text-muted:           #{a.$color-light-text-muted};                // #6A737D
   --text-accent:          var(--h5-color);                             // #1E88E5 (aligned with H5)
   --text-accent-hover:    #0288D1;
   --link-color:           var(--h5-color);                             // #1E88E5

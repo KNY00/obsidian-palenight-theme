@@ -37,7 +37,7 @@ body.is-mobile {
 
     .workspace-drawer-active-tab-header {
       background-color: var(--background-secondary);
-      color: var(--text-bright, a.$color-palenight-text-bright);
+      color: var(--text-bright, var(--text-normal));
     }
   }
 

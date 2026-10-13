@@ -17,7 +17,7 @@
 
     th {
       font-weight: a.$font-weight-semibold;
-      color: var(--text-bright, a.$color-palenight-text-bright);
+      color: var(--text-bright, var(--text-normal));
       padding: a.$spacing-2 a.$spacing-4;
       text-align: left;
     }
@@ -63,7 +63,7 @@
     th {
       padding: a.$spacing-3 a.$spacing-4;
       font-weight: a.$font-weight-semibold;
-      color: var(--text-bright, a.$color-palenight-text-bright);
+      color: var(--text-bright, var(--text-normal));
       border: 1px solid var(--background-modifier-border);
     }
   }
