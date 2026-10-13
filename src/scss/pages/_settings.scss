@@ -28,11 +28,14 @@
 
 .vertical-tab-content-container {
   background-color: var(--background-primary);
-  padding: a.$spacing-8;
 
   .setting-item {
     border-bottom: 1px solid var(--background-modifier-border);
-    padding: a.$spacing-4 0;
+    padding: a.$spacing-4 var(--size-4-4);
+
+    &.mod-toggle {
+      align-items: center;
+    }
 
     .setting-item-name {
       font-weight: a.$font-weight-medium;

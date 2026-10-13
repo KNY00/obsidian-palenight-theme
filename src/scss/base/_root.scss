@@ -22,6 +22,12 @@
   --size-4-3: #{a.$spacing-3};
   --size-4-4: #{a.$spacing-4};
 
+  // Settings design tokens
+  --setting-items-padding-x: #{a.$spacing-4};
+  --setting-items-padding-y: #{a.$spacing-4};
+  --setting-items-radius: #{a.$radius-md};
+  --setting-items-background: var(--background-secondary-alt);
+
   // Border width
   --border-width: 1px;
 
