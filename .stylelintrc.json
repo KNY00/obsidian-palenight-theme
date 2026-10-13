@@ -1,0 +1,55 @@
+{
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["src/scss/**/*.scss"],
+      "customSyntax": "postcss-scss",
+      "extends": ["stylelint-config-standard-scss"],
+      "rules": {
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+        "declaration-property-value-no-unknown": null,
+        "declaration-property-unit-disallowed-list": null,
+        "unit-no-unknown": null,
+        "color-function-notation": null,
+        "color-function-alias-notation": null,
+        "color-hex-length": null,
+        "alpha-value-notation": null,
+        "selector-class-pattern": null,
+        "custom-property-pattern": null,
+        "scss/dollar-variable-pattern": null,
+        "no-descending-specificity": null,
+        "scss/no-global-function-names": null,
+        "scss/dollar-variable-colon-space-after": null,
+        "scss/dollar-variable-empty-line-before": null,
+        "scss/double-slash-comment-empty-line-before": null,
+        "scss/at-extend-no-missing-placeholder": null,
+        "at-rule-empty-line-before": null,
+        "declaration-empty-line-before": null,
+        "property-no-vendor-prefix": null,
+        "value-keyword-case": null,
+        "declaration-block-no-redundant-longhand-properties": null
+      }
+    },
+    {
+      "files": ["theme.css"],
+      "extends": ["stylelint-config-obsidianmd"],
+      "rules": {
+        "selector-class-pattern": null,
+        "custom-property-pattern": null,
+        "color-function-notation": null,
+        "color-function-alias-notation": null,
+        "alpha-value-notation": null,
+        "color-hex-length": null,
+        "rule-empty-line-before": null,
+        "declaration-empty-line-before": null,
+        "no-descending-specificity": null,
+        "value-keyword-case": null,
+        "selector-attribute-quotes": null,
+        "number-max-precision": null,
+        "declaration-block-no-redundant-longhand-properties": null,
+        "property-no-vendor-prefix": null
+      }
+    }
+  ]
+}

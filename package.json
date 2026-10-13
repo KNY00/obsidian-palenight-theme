@@ -4,7 +4,12 @@
   "description": "A polished Obsidian theme inspired by the VS Code Material Palenight color palette.",
   "main": "theme.css",
   "scripts": {
+    "lint:scss": "stylelint \"src/scss/**/*.scss\"",
+    "lint:css": "stylelint \"theme.css\"",
+    "lint": "npm run lint:scss && npm run lint:css",
+    "prebuild": "npm run lint:scss",
     "build": "sass src/scss/main.scss theme.css --no-source-map --style=expanded",
+    "postbuild": "npm run lint:css",
     "build:min": "sass src/scss/main.scss theme.css --no-source-map --style=compressed",
     "watch": "sass src/scss/main.scss theme.css --watch --no-source-map",
     "dev": "npm run watch",
@@ -22,6 +27,10 @@
   "author": "Yanis",
   "license": "MIT",
   "devDependencies": {
-    "sass": "^1.83.0"
+    "postcss-scss": "^4.0.9",
+    "sass": "^1.83.0",
+    "stylelint": "^17.16.0",
+    "stylelint-config-obsidianmd": "^0.1.0",
+    "stylelint-config-standard-scss": "^17.0.0"
   }
 }

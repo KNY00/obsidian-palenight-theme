@@ -4,9 +4,7 @@ yarn-debug.log*
 yarn-error.log*
 .DS_Store
 Thumbs.db
-vscode-material-palenight-theme-master
-obsidian-doc
-obsidian-sample-theme
 GEMINI.md
 .agents
+.vscode
 theme.css
