@@ -38,27 +38,43 @@
 // Délimitations de bordures entre volets latéraux et fenêtre centrale
 // -----------------------------------------------------------------------------
 
-// Fenêtre centrale (mod-root & mod-primary)
+// Fenêtre centrale : couleur de fond de base
 .workspace-split.mod-root,
-.mod-root,
-.mod-primary {
+.mod-root {
   background-color: var(--background-primary);
-  border-left: 1px solid var(--divider-color);
-  border-right: 1px solid var(--divider-color);
-  position: relative;
-  z-index: 1;
+}
 
-  // Séparations nettes au sein des subdivisions de la fenêtre centrale
-  &.mod-vertical > .workspace-split:not(:last-child),
-  &.mod-vertical > .workspace-tabs:not(:last-child),
-  &.mod-vertical > .workspace-leaf:not(:last-child) {
+// Délimitations et séparations exclusives à l'environnement Desktop
+body:not(.is-mobile) {
+  .workspace-split.mod-root,
+  .mod-root {
+    border-left: 1px solid var(--divider-color);
     border-right: 1px solid var(--divider-color);
+    position: relative;
+    z-index: 1;
+
+    // Séparations nettes au sein des subdivisions de la fenêtre centrale
+    &.mod-vertical > .workspace-split:not(:last-child),
+    &.mod-vertical > .workspace-tabs:not(:last-child),
+    &.mod-vertical > .workspace-leaf:not(:last-child) {
+      border-right: 1px solid var(--divider-color);
+    }
+
+    &.mod-horizontal > .workspace-split:not(:last-child),
+    &.mod-horizontal > .workspace-tabs:not(:last-child),
+    &.mod-horizontal > .workspace-leaf:not(:last-child) {
+      border-bottom: 1px solid var(--divider-color);
+    }
   }
 
-  &.mod-horizontal > .workspace-split:not(:last-child),
-  &.mod-horizontal > .workspace-tabs:not(:last-child),
-  &.mod-horizontal > .workspace-leaf:not(:last-child) {
-    border-bottom: 1px solid var(--divider-color);
+  .workspace-leaf-resize-handle {
+    background-color: var(--divider-color);
+    transition: background-color a.$transition-fast;
+    z-index: 10;
+
+    &:hover {
+      background-color: var(--interactive-accent) !important;
+    }
   }
 }
 
@@ -67,17 +83,6 @@
   &.mod-horizontal,
   &.mod-vertical {
     background-color: var(--background-secondary);
-  }
-}
-
-// Ligne de délimitation interactive entre les volets (poignée de redimensionnement)
-.workspace-leaf-resize-handle {
-  background-color: var(--divider-color);
-  transition: background-color a.$transition-fast;
-  z-index: 10;
-
-  &:hover {
-    background-color: var(--interactive-accent) !important;
   }
 }
 

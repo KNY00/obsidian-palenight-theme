@@ -1,0 +1,67 @@
+// =============================================================================
+// Layout: Adaptations spécifiques Obsidian Mobile (Phones & Tablets)
+// =============================================================================
+
+@use "../abstracts" as a;
+
+body.is-mobile {
+  // ---------------------------------------------------------------------------
+  // 1. Tiroirs latéraux mobiles (Workspace Drawers)
+  // Conserve la position 'fixed' et le z-index natif de app.css (--layer-popover = 30)
+  // pour que le drawer reste toujours au-dessus du backdrop (--layer-cover = 5).
+  // ---------------------------------------------------------------------------
+  .workspace-drawer {
+    background-color: var(--background-secondary) !important;
+
+    &.mod-left {
+      border-right: 1px solid var(--divider-color) !important;
+      border-left: none !important;
+    }
+
+    &.mod-right {
+      border-left: 1px solid var(--divider-color) !important;
+      border-right: none !important;
+    }
+
+    // Conteneur interne du drawer
+    .workspace-drawer-inner {
+      background-color: var(--background-secondary);
+    }
+
+    // En-tête du volet mobile
+    .workspace-drawer-header {
+      background-color: var(--background-secondary-alt);
+      border-bottom: 1px solid var(--divider-color);
+      color: var(--text-normal);
+    }
+
+    .workspace-drawer-active-tab-header {
+      background-color: var(--background-secondary);
+      color: var(--text-bright, a.$color-palenight-text-bright);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // 2. Barres d'actions mobiles (Mobile Toolbar & Navbar)
+  // ---------------------------------------------------------------------------
+  .mobile-navbar {
+    background-color: var(--background-secondary);
+    border-top: 1px solid var(--divider-color);
+  }
+
+  .mobile-toolbar {
+    background-color: var(--background-secondary);
+    border-top: 1px solid var(--divider-color);
+
+    .mobile-toolbar-options-container {
+      background-color: var(--background-secondary);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // 3. Masquer les poignées de redimensionnement desktop sur mobile
+  // ---------------------------------------------------------------------------
+  .workspace-leaf-resize-handle {
+    display: none !important;
+  }
+}
