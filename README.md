@@ -1,7 +1,7 @@
-# Obsidian Material Palenight Theme
+# Obsidian Palenight Plus Theme
 
-![Obsidian Palenight by KNY00](screenshots/screenshot-palenight-obsidian.webp)
-*Obsidian Palenight by KNY00*
+![Obsidian Palenight Plus by KNY00](screenshots/screenshot-palenight-obsidian.webp)
+*Obsidian Palenight Plus by KNY00*
 
 A polished and modern theme for [Obsidian](https://obsidian.md/), faithfully inspired by the color palette of the renowned VS Code **Material Palenight** theme created by Olaolu Olawuyi.
 
